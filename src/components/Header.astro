@@ -1,92 +1,47 @@
 ---
 // Components
-import Button from "components/Button.astro"
-import Logo from "./Logo.astro"
-import NotificationBar from "components/NotificationBar.astro"
+import Button from "components/Button.astro";
+import Logo from "./Logo.astro";
+import NotificationBar from "components/NotificationBar.astro";
 
-const hasNotificationBar = true // Set this to false when NotificationBar is removed or page will crash
+const hasNotificationBar = true; // Set this to false when NotificationBar is removed or page will crash
 
 const links = [
   {
-    text: "Schedule",
-    link: "/schedule/",
+    text: "The Program",
+    link: "/#program-overview",
   },
   {
-    text: "Speakers",
-    link: "/speakers/",
+    text: "How It Works",
+    link: "/#how-it-works",
   },
   {
-    text: "Supporters",
-    link: "/sponsors/",
-  },
-  // {
-  //   text: "FAQ",
-  //   link: "/faq/",
-  // },
-  {
-    text: "Co-located Events",
-    subLinks: [
-      {
-        text: "GOSIM AI Spotlight",
-        link: "https://spotlight.gosim.org/ai2025",
-      },
-      {
-        text: "GOSIM Open-Source AI Strategy Forum",
-        link: "/os-ai-strategy-forum/",
-      },
-      {
-        text: "PyTorch Day France",
-        link: "https://events.linuxfoundation.org/pytorch-day-france/",
-      },
-      {
-        text: "Seeed Embodied AI Hackathon",
-        link: "https://lu.ma/7djaix39",
-      },
-    ],
+    text: "Why Participate",
+    link: "/#why-participate",
   },
   {
-    text: "More",
-    subLinks: [
-      {
-        text: "Conference Venue",
-        link: "/#venue",
-        openInNewTab: true,
-      },
-      {
-        text: "Forum Venue",
-        link: "/os-ai-strategy-forum/#venue",
-      },
-      // {
-      //   text: "Volunteer",
-      //   link: "https://docs.google.com/forms/d/e/1FAIpQLSc62kJczw7lr-l0JAAbkabeIrrPPAD7OWyzwDopTD0L4HC6EQ/viewform",
-      //   openInNewTab: true,
-      // },
-      {
-        text: "Our Volunteers",
-        link: "/volunteers/",
-      },
-    ],
+    text: "Rules & Eligibility",
+    link: "/faq/",
   },
-]
+];
 
-const slug = Astro.url.pathname
+const slug = Astro.url.pathname;
 ---
 
 <header>
   {
     hasNotificationBar && (
       <NotificationBar
-        text="✨ Thank you all for participating in  GOSIM AI Paris! ✨ See you in September at GOSIM Hangzhou! ✨"
-        link="https://hangzhou2025.gosim.org"
+        text="Winner showcase at GOSIM Hangzhou 2025 • Nominate Project"
+        link=""
       />
     )
   }
 
   <div class="floating-ticket-button">
     <Button
-      text="Get Tickets"
-      link="https://www.eventbrite.com/e/gosim-ai-paris-tickets-1265928669729?aff=oddtdtcreator"
-      openInNewTab
+      text="Nominate Project"
+      link="/"
       class="btn primary btn-floating btn-hover"
     />
   </div>
@@ -130,7 +85,7 @@ const slug = Astro.url.pathname
                     </svg>
                   </button>
                 ) : (
-                  <a class="link-click" href={loop.link}>
+                  <a class="link-click" href={loop.link} data-navigation-toggle="close">
                     <span>{loop.text}</span>
                   </a>
                 )}
@@ -141,8 +96,8 @@ const slug = Astro.url.pathname
       </nav>
       <div class="box-row box-row-btn">
         <Button
-          text="Get Tickets"
-          link="https://www.eventbrite.com/e/gosim-ai-paris-tickets-1265928669729?aff=oddtdtcreator"
+          text="Nominate Project"
+          link="/"
           openInNewTab
           class="btn primary xl btn-hover"
         />
@@ -235,8 +190,8 @@ const slug = Astro.url.pathname
 
       <div>
         <Button
-          text="Get Tickets"
-          link="https://www.eventbrite.com/e/gosim-ai-paris-tickets-1265928669729?aff=oddtdtcreator"
+          text="Nominate Project"
+          link="/"
           openInNewTab
           class="btn outline btn-hover"
         />
@@ -266,7 +221,9 @@ const slug = Astro.url.pathname
     top: -15px;
     z-index: 10;
   }
-
+  .btn .btn-content > span {
+    color: white !important;
+  }
   /* Ensure notification bar is clickable */
   :global(.notification-bar) {
     position: relative;
@@ -281,6 +238,6 @@ const slug = Astro.url.pathname
 
   .hamburger.btn-floating[data-has-notification="true"],
   .btn.btn-filter-floating[data-has-notification="true"] {
-    margin-top: 32px;
+    margin-top: 50px;
   }
 </style>

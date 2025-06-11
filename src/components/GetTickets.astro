@@ -1,99 +1,155 @@
 ---
 // Packages
-import { Picture } from 'astro:assets';
+import { Picture } from "astro:assets";
 
 // Components
 import Button from "components/Button.astro";
 
 // Images
-import image from 'videos/gosim-paris-compressed.webp';
 
 interface Props {
-    title: string;
-    location: string;
-    date: string;
+  title: string;
+  location: string;
+  date: string;
+  text: string;
+  bulletPoints?: Array<string>;
+  ctaButton?: {
     text: string;
-    ctaButton?: {
-        text: string;
-        link: string;
-        openInNewTab?: boolean;
-    };
+    link: string;
+    openInNewTab?: boolean;
+  };
 }
 
-const { title, location, date, text, ctaButton } = Astro.props;
+const {
+  title,
+  text,
+  bulletPoints = [
+    "Application period ends: Monday, April 15 at 11:59 PM PST(UTC - 8) / Tuesday, April 16 at 08:59 AM Europe(UTC + 1)",
+    "Selected candidates will be announced by: April 26, 2025",
+    "GOSIM Spotlight Showcase and Lightning Talks: May 6-7, 2025 in Paris, France",
+  ],
+  ctaButton,
+} = Astro.props;
 
 const slug = Astro.url.pathname;
 ---
 
 <section
-    class="section section-register-gosim"
-    data-theme-section="dark"
-    data-bg-section="primary"
-    data-page={slug}
-    id={'page' + slug.replaceAll('/', '-') + 'register'}
+  class="section section-register-gosim"
+  data-theme-section="dark"
+  data-bg-section="primary"
+  data-page={slug}
+  id={"page" + slug.replaceAll("/", "-") + "register"}
 >
-    <div class="overlay overlay-wrap">
-        <div class="overlay overlay-background overlay-background-video">
-            <div class="styled-video playpause overlay">
-                <Picture
-                    src={image}
-                    formats={['webp', 'jpg']}
-                    alt="Paris"
-                    class="overlay"
-                />
-                
-                <video
-                    class="overlay"
-                    preload="auto"
-                    autoplay
-                    loop
-                    muted
-                    webkit-playsinline
-                    playsinline
-                    poster="/videos/gosim-paris-compressed.webp"
-                >
-                    <source
-                        src="/videos/gosim-paris-compressed.webm"
-                        type="video/webm"
-                    />
-                    <source
-                        src="/videos/gosim-paris-compressed.mp4"
-                        type="video/mp4"
-                    />
-                </video>
-            </div>
-            <div class="overlay overlay-gradient-v2"></div>
-            <div class="overlay overlay-gradient-cover"></div>
-        </div>
+  <div class="overlay overlay-wrap">
+    <div class="overlay overlay-background overlay-background-video">
+      <div class="styled-video playpause overlay">
+
+        <video
+          class="overlay"
+          preload="auto"
+          autoplay
+          loop
+          muted
+          webkit-playsinline
+          playsinline
+          poster=""
+        >
+          <source src="/videos/vid9932.mp4" type="video/webm" />
+        </video>
+      </div>
+      <div class="overlay overlay-gradient-v2"></div>
+      <div class="overlay overlay-gradient-cover"></div>
     </div>
+  </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="col-row col-row-title">
-                    <h2 class="custom3">{title}</h2>
-                </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="col-row col-row-title">
+          <h2 class="custom3">{title}</h2>
+        </div>
+        <div class="col-row col-row-text styled-content">
+          <p style="color: #fff;">{text}</p>
+        </div>
 
-                <div class="col-row col-row-info">
-                    <p>{location}</p>
-                    <p>{date}</p>
-                </div>
-
-                <div class="col-row col-row-text styled-content">
-                    <p>{text}</p>
-                </div>
-
-                {ctaButton?.text && (
-                    <div class="col-row col-row-btn">
-                        <Button
-                            link={ctaButton.link}
-                            text={ctaButton.text}
-                            openInNewTab={ctaButton?.openInNewTab}
-                            class="btn primary xl btn-hover"
+        {
+          bulletPoints.length > 0 && (
+            <div class="col-row col-row-features">
+              <ul class="feature-list">
+                {bulletPoints.map((point) => (
+                  <li class="feature-item">
+                    <div class="check-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="#fff"
+                        class="check-svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                          clip-rule="evenodd"
                         />
+                      </svg>
                     </div>
-                )}
+                    <p style="color: #fff; font-size: 1rem;">{point}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
-        </div>
+          )
+        }
+
+        {
+          ctaButton?.text && (
+            <div class="col-row col-row-btn">
+              <Button
+                link={ctaButton.link}
+                text={ctaButton.text}
+                openInNewTab={ctaButton?.openInNewTab}
+                class="btn primary xl btn-hover"
+              />
+            </div>
+          )
+        }
+      </div>
     </div>
+  </div>
 </section>
+
+<style>
+  .feature-list {
+    list-style: none;
+    max-width: 30em;
+    padding: 0;
+    margin: 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .check-icon {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+    background-color: #076597;
+    display: flex;
+    border: 1px solid #fff;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .check-svg {
+    width: 1rem;
+    height: 1rem;
+    color: white;
+  }
+</style>

@@ -25,7 +25,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
             {sponsorsData.categories.map((category) => (
                 <div
                     class="single-filter"
-                    data-anchor-target="#grid"
+                    data-anchor-target="#how-it-works"
                     data-filter-status={category.name === "All" ? "active" : "not-active"}
                     data-filter-category={category.name.toLowerCase().replace(/ /g, "-")}
                 >

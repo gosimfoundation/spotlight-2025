@@ -15,7 +15,8 @@ const { title, description, cards } = Astro.props;
 <section
     class="section section-home-why"
     data-theme-section="light"
-    data-bg-section="lightgray"
+    data-bg-section="light"
+    id="why-participate"
 >
     <div class="container">
         <div class="row row-title grid">
@@ -39,7 +40,7 @@ const { title, description, cards } = Astro.props;
                         loading="lazy"
                     />
                     <div class="why-content">
-                        <h3 class="h5">{loop.title}</h3>
+                        <h4>{loop.title}</h4>
                         <p>{loop.description}</p>
                     </div>
                 </div>

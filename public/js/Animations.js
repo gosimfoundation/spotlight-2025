@@ -509,7 +509,7 @@ function initScrollToAnchor() {
 
    $(".filter-container [data-filter-category]").click(function () {
       setTimeout(function () {
-         scroll.scrollTo("#grid", {
+         scroll.scrollTo("#how-it-works", {
             immediate: true,
             offset: scrollToOffset,
          });

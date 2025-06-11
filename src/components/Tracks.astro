@@ -1,84 +1,107 @@
 ---
 // Components
-import Button from "components/Button.astro"
+import Button from "components/Button.astro";
 
 interface Props {
-	title: string,
-    list?: Array<{
-        title: string,
-        text: string,
-    }>,
-    ctaButton: {
-        text: string,
-        link: string,
-    }
+  title: string;
+  description?: string;
+  list?: Array<{
+    title: string;
+    text: string;
+  }>;
+  ctaButton: {
+    text: string;
+    link: string;
+  };
 }
 
-const { title, list, ctaButton } = Astro.props;
+const { title, description, list, ctaButton } = Astro.props;
 ---
 
 <section
-    class="section section-agenda-grid"
-    id="grid"
-    data-theme-section="light"
-    data-bg-section="light"
-    data-scroll-section
+  class="section section-how-it-works"
+  id="how-it-works"
+  data-theme-section="light"
+  data-bg-section="light"
+  data-scroll-section
 >
-    <div class="container">
-        <div class="row row-list accordion visible">
-            <div class="list-group">
-
-                <div class="row">
-                    <div class="col col-title">
-                        <h2>{title}</h2>
-                    </div>
+  <div class="container">
+    <div class="row row-list accordion visible">
+      <div class="list-group">
+        <div class="row" style="justify-content: center;">
+          <div
+            class="col col-title"
+            style="text-align: center; max-width: 90vw; margin: 0 auto;"
+          >
+            <h2>{title}</h2>
+            {
+              description && (
+                <div class="styled-content" style="margin-top: 24px;">
+                  <p>{description}</p>
                 </div>
-
-                <ul class="row row-list">
-                    {list?.map((loop, i) => (
-                        <li
-                            class="single-agenda-card single-accordion-item card-hover"
-                            data-accordion-status="not-active"
-                        >
-                            <div class="top" data-accordion-toggle>
-                                <div class="left">
-                                    <div class="timeslot">
-                                        <p class="h5">{(i + 1).toString().padStart(3, '0')}</p>
-                                    </div>
-                                    <h3 class="h4">{loop.title}</h3>
-                                </div>
-                                <div class="plus">
-                                    <div class="plus-fill"></div>
-                                    <div class="bar bar-top"></div>
-                                    <div class="bar bar-bottom"></div>
-                                </div>
-                            </div>
-                            <div class="bottom">
-                                <div class="bottom-wrap">
-                                    <div class="bottom-content">
-                                        <div class="card-row styled-content">
-                                            <p>
-                                                {loop.text}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-
-            </div>
+              )
+            }
+          </div>
         </div>
 
-        <div class="row row-custom">
-            <div class="col">
-                <Button
-                    text={ctaButton.text}
-                    link={ctaButton.link}
-                    class="btn outline btn-hover xl"
-                />
-            </div>
-        </div>
+        <ul
+          class="row row-list"
+          style="margin-top: 32px;    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;"
+        >
+          {
+            list?.map((loop, i) => (
+              <li
+                class="single-agenda-card single-accordion-item card-hover"
+                data-accordion-status="not-active"
+              >
+                <div class="top" data-accordion-toggle>
+                  <div class="left">
+                    <div class="timeslot">
+                      <p class="h5">{(i + 1).toString().padStart(3, "0")}</p>
+                    </div>
+                    <h3 class="h4">{loop.title}</h3>
+                  </div>
+                  <div class="plus">
+                    <div class="plus-fill" />
+                    <div class="bar bar-top" />
+                    <div class="bar bar-bottom" />
+                  </div>
+                </div>
+                <div class="bottom">
+                  <div class="bottom-wrap">
+                    <div class="bottom-content">
+                      <div class="card-row styled-content">
+                        <p>{loop.text}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
     </div>
+
+    <div class="row row-custom">
+      <div class="col">
+        <Button
+          text={ctaButton.text}
+          link={ctaButton.link}
+          class="btn outline btn-hover xl"
+        />
+      </div>
+    </div>
+  </div>
 </section>
+
+<style>
+  @media (min-width: 992px) {
+    .col-title {
+      max-width: 50vw !important;
+    }
+  }
+</style>

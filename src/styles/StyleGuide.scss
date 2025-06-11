@@ -10,13 +10,13 @@ html.lenis {height: auto;}
 
 :root {
 
-   --color-dark-rgb: 28, 29, 36;
+   --color-dark-rgb: 4, 62, 93;
    --color-dark: rgba(var(--color-dark-rgb), 1);
    --color-dark-tint: #22232B;
 
-   --color-light-rgb: 247, 247, 255;
+   --color-light-rgb: 248, 247, 255;
    --color-light: rgba(var(--color-light-rgb), 1);
-   --color-light-tint: #EFEFFF;
+   --color-light-tint: #ebe8fe;
 
    --color-white-rgb: 255, 255, 255;
    --color-white: rgba(var(--color-white-rgb), 1);
@@ -24,7 +24,7 @@ html.lenis {height: auto;}
    --color-black-rgb: 0, 0, 0;
    --color-black: rgba(var(--color-black-rgb), 1);
 
-   --color-primary-rgb: 179, 178, 251;
+   --color-primary-rgb: 29, 61, 60;
    --color-primary: rgba(var(--color-primary-rgb), 1);
 
    --color-secondary-rgb: 147, 136, 254;
@@ -36,7 +36,7 @@ html.lenis {height: auto;}
    --color-beige-rgb: 254, 249, 240;
    --color-beige: rgba(var(--color-beige-rgb), 1);
 
-   --color-gray: #C7BFB2;
+   --color-gray: #f1faff;
    --color-lightgray: var(--color-light-tint);
 
    --color-border: rgba(var(--color-dark-rgb), 0.35);
@@ -64,7 +64,7 @@ html.lenis {height: auto;}
 
    --title-size: clamp(5em, 7.5vw, 7.5em);
 
-   --border-radius: calc(var(--btn-height) * 0.5);
+   --border-radius: calc(var(--btn-height) * 0.15);
 
    --btn-height: 2.6em;
    --nav-bar-height: calc(var(--btn-height) + (var(--row-gap) * 2));
@@ -174,7 +174,7 @@ h1, h2, h3, h4, h5, h6, p, a, li, ul, ol, span, strong, em, figcaption,
 
 h1, .h1 {
    font-family: 'Manrope', sans-serif;
-   font-weight: 600;
+   font-weight: 400;
    font-size: calc(var(--title-size) * 0.8);
    line-height: 1;
    color: var(--color-dark);
@@ -182,9 +182,9 @@ h1, .h1 {
 
 h2, .h2 {
    font-family: 'Manrope', sans-serif;
-   font-weight: 600;
+   font-weight: 400;
    font-size: calc(var(--title-size) * 0.45);
-   line-height: 1;
+   line-height: 1.2;
    color: var(--color-dark);
 }
 
@@ -221,7 +221,7 @@ h3.light,
 
 h4, .h4 {
    font-family: 'Manrope', sans-serif;
-   font-weight: 600;
+   font-weight: 400;
    font-size: calc(var(--title-size) * 0.275);
    line-height: 1;
    color: var(--color-dark);
@@ -229,8 +229,8 @@ h4, .h4 {
 
 h5, .h5 {
    font-family: 'Manrope', sans-serif;
-   font-weight: 600;
-   font-size: calc(var(--title-size) * 0.2);
+   font-weight: 400;
+   font-size: calc(var(--title-size) * 0.22);
    line-height: 1.2;
    color: var(--color-dark);
 }
@@ -243,9 +243,9 @@ p,
 .p {
    font-weight: 400;
    font-style: normal;
-   font-size: 0.85em;
-   line-height: 1.5;
-   color: var(--color-text);
+   font-size: 1.125rem;
+   line-height: 1.6;
+   color: #1d3d3c;
 }
 
 span {
@@ -418,7 +418,7 @@ header {
 .overlay {
    position: absolute;
    top: 0;
-   left: 0;
+   left: 1px;
    height: 100%;
    width: 100%;
 }
@@ -503,7 +503,7 @@ video.overlay {
    bottom: 0px;
    right: 0px;
    border-radius: var(--border-radius);
-   background-color: var(--color-primary);
+   background-color: rgb(190 180 253);
    transition: background-color var(--animation-theme);
 }
 
