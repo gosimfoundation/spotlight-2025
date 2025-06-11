@@ -1,24 +1,4 @@
-# GOSIM AI Paris 2025
-
-## How to add Schedule
-1. Add data to JSON file at `src/json/Schedule.json`
-2. If you add speaker images, add only the file name, such as `speaker-name.jpg`
-3. Add potential speaker images as PNG or JPG files to `public/images/speakers/`
-
-## How to add Sponsors
-1. Add data to JSON file at `src/json/Sponsors.json`
-2. Add sponsor file name, such as `sponsor-name.png`
-3. Add sponsor images as PNG / JPG / SVG files to `public/images/sponsors/`
-
-Current build only has one category for sponsors. To add additional categories:
-1. Update JSON file with additional category values to the "categories" (required) and "partners" sections of JSON file. We have created a JSON file "sponsors-original-for-reference" which shows how to set it up. 
-
-## How to add Speakers
-1. Add data to JSON file at `src/json/Speakers.json`
-2. Add speaker file name, such as `speaker-name.png`
-3. Add speaker images as PNG / JPG files to `public/images/speakers/`
-
-NOTE: The speaker page gets generated from the Speakers.json file, so if you add speakers to Schedules.json file without adding them to the Speakers.json file, the link to the speak will give a 404. 
+# GOSIM Spotlight Hangzhou 2025
 
 ## How to add FAQ
 1. Add data to JSON file at `src/json/FAQ.json`
