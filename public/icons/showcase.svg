@@ -1,15 +1,14 @@
-<svg id="Museum-Painting--Streamline-Ultimate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24">
+<svg viewBox="-0.75 -0.75 48 48" xmlns="http://www.w3.org/2000/svg" id="Presentation-Projector-Screen-Bars--Streamline-Ultimate" height="48" width="48">
   <desc>
-    Museum Painting Streamline Icon: https://streamlinehq.com
+    Presentation Projector Screen Bars Streamline Icon: https://streamlinehq.com
   </desc>
-  <defs></defs>
-  <title>museum-painting</title>
-  <path d="m5.25 15 0 8.25" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-  <path d="m18.75 15 0 8.25" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-  <path d="M18.75 16.484a15.785 15.785 0 0 1 -13.5 0" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-  <path d="M23.25 17.841a15.648 15.648 0 0 1 -4.5 -1.357" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-  <path d="M0.75 17.841a15.648 15.648 0 0 0 4.5 -1.357" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-  <path d="M4 0.75h16s1 0 1 1V11s0 1 -1 1H4s-1 0 -1 -1V1.75s0 -1 1 -1" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-  <path d="m6 9 3.236 -4.23a0.75 0.75 0 0 1 1.095 -0.062l2.612 2.836" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-  <path d="m12 9 3.17 -4.9a0.75 0.75 0 0 1 1.236 -0.053L18 6" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="M4.8515 4.84375h36.8125v32.9375h-36.8125z" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="M21.320249999999998 43.59375a1.9375 1.9375 0 1 0 3.875 0 1.9375 1.9375 0 1 0 -3.875 0Z" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="m23.257749999999998 37.78125 0 3.875" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="m9.69525 31.96875 27.125 0" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="M45.53125 2.90625a1.9375 1.9375 0 0 1 -1.9375 1.9375h-40.6875a1.9375 1.9375 0 0 1 0 -3.875h40.6875a1.9375 1.9375 0 0 1 1.9375 1.9375Z" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="m2.914 37.78125 40.6875 0" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="M11.625 24.21875h3.875a0.96875 0.96875 0 0 1 0.96875 0.96875v6.78125l0 0h-5.8125l0 0V25.1875a0.96875 0.96875 0 0 1 0.96875 -0.96875Z" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="M21.3125 18.40625h3.875a0.96875 0.96875 0 0 1 0.96875 0.96875v12.59375l0 0h-5.8125l0 0V19.375a0.96875 0.96875 0 0 1 0.96875 -0.96875Z" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="M31 12.59375h3.875a0.96875 0.96875 0 0 1 0.96875 0.96875v18.40625l0 0h-5.8125l0 0V13.5625a0.96875 0.96875 0 0 1 0.96875 -0.96875Z" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 </svg>

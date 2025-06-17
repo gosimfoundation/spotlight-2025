@@ -1,16 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Travel-Luggage-1--Streamline-Ultimate" height="24" width="24">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.75 -0.75 48 48" id="Travel-Luggage-1--Streamline-Ultimate" height="48" width="48">
   <desc>
     Travel Luggage 1 Streamline Icon: https://streamlinehq.com
   </desc>
-  <g>
-    <path d="M6 17.93a9 9 0 1 1 12.75 -8.18" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-    <path d="m4 2.81 5.28 2a1.51 1.51 0 0 1 0.94 1.7l-0.28 1.56a1.51 1.51 0 0 1 -1.11 1.16l-2.08 0.52 -1.15 2.88A3 3 0 0 1 4.47 14l-1.83 1.27" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-    <path d="m16 3.27 -1.47 2.92a1.48 1.48 0 0 0 -0.08 1.15L15 9" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-    <g>
-      <path d="M11.25 15h10.5s1.5 0 1.5 1.5v5.25s0 1.5 -1.5 1.5h-10.5s-1.5 0 -1.5 -1.5V16.5s0 -1.5 1.5 -1.5" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-      <path d="m13.5 15 0 8.25" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-      <path d="m19.5 15 0 8.25" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-    </g>
-    <path d="M14.25 15v-1.25a2.25 2.25 0 0 1 4.5 0V15" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-  </g>
+  <path d="M17.596375000000002 44.876374999999996a21.6709375 21.6709375 0 0 1 -2.7628749999999997 -0.9183749999999999A22.28125 22.28125 0 1 1 45.53125 23.321687500000003h0" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="M1.3039375 19.446687500000003h11.787749999999999a5.8125 5.8125 0 0 1 4.111375 1.7030625l0.0484375 0.0484375a6.5080625 6.5080625 0 0 1 1.468625 6.9517500000000005l-0.48825 1.2651875000000001a8.5715 8.5715 0 0 1 -6.5874999999999995 5.366875l-6.800624999999999 1.1334374999999999m34.4119375 -28.09375h-11.237499999999999a4.359375 4.359375 0 0 0 0 8.71875h0.837a5.8125 5.8125 0 0 1 4.7178125 2.4160625000000002" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" d="M26.640625 30.102937500000003h14.53125s4.359375 0 4.359375 4.359375v6.78125s0 4.359375 -4.359375 4.359375h-14.53125s-4.359375 0 -4.359375 -4.359375v-6.78125s0 -4.359375 4.359375 -4.359375" stroke-width="1.5"></path>
+  <path d="M39.71875 28.165437500000003a3.875 3.875 0 0 0 -3.875 -3.875h-3.875a3.875 3.875 0 0 0 -3.875 3.875v1.9375h11.625zm-9.6875 1.9375v15.5m7.75 -15.5v15.5" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 </svg>

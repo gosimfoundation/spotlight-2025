@@ -1,12 +1,12 @@
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="Multiple-Circle--Streamline-Ultimate" height="24" width="24">
+<svg viewBox="-0.75 -0.75 48 48" xmlns="http://www.w3.org/2000/svg" id="Multiple-Circle--Streamline-Ultimate" height="48" width="48">
   <desc>
     Multiple Circle Streamline Icon: https://streamlinehq.com
   </desc>
-  <path d="M9 3.75a3 3 0 1 0 6 0 3 3 0 1 0 -6 0Z" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-  <path d="M15.75 14.25V12a3.75 3.75 0 0 0 -7.5 0v2.25h1.5l0.75 6h3l0.75 -6Z" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-  <path d="M2.25 6a2.25 2.25 0 1 0 4.5 0 2.25 2.25 0 1 0 -4.5 0Z" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-  <path d="M5.7 9.947A3.753 3.753 0 0 0 0.75 13.5v0.75h1.5l0.75 4.5h3l0.376 -2.256" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-  <path d="M17.25 6a2.25 2.25 0 1 0 4.5 0 2.25 2.25 0 1 0 -4.5 0Z" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-  <path d="M18.3 9.947a3.753 3.753 0 0 1 4.95 3.553v0.75h-1.5l-0.75 4.5h-3l-0.376 -2.256" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-  <path d="M23.25 21c0 1.243 -5.037 2.25 -11.25 2.25S0.75 22.243 0.75 21" fill="none" stroke="#00303e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="M32.9375 38.168749999999996c7.4555 0.6296875000000001 12.59375 1.956875 12.59375 3.4875000000000003 0 2.13125 -9.97425 3.875 -22.28125 3.875S0.96875 43.7875 0.96875 41.65625c0 -1.5306250000000001 5.105312499999999 -2.8539375000000002 12.512375 -3.4875000000000003" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="M35.359375 9.203125a4.359375 4.359375 0 1 0 8.71875 0 4.359375 4.359375 0 1 0 -8.71875 0Z" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="M39.71875 15.5a5.8125 5.8125 0 0 0 -5.8125 5.8125v4.84375H36.8125l0.96875 8.71875h3.875l0.96875 -8.71875h2.90625V21.3125a5.8125 5.8125 0 0 0 -5.8125 -5.8125Z" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="M2.421875 9.203125a4.359375 4.359375 0 1 0 8.71875 0 4.359375 4.359375 0 1 0 -8.71875 0Z" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="M6.78125 15.5a5.8125 5.8125 0 0 0 -5.8125 5.8125v4.84375H3.875l0.96875 8.71875h3.875l0.96875 -8.71875h2.90625V21.3125a5.8125 5.8125 0 0 0 -5.8125 -5.8125Z" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="M17.921875 6.296875a5.328125 5.328125 0 1 0 10.65625 0 5.328125 5.328125 0 1 0 -10.65625 0Z" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+  <path d="M30.03125 20.34375a6.78125 6.78125 0 0 0 -13.5625 0v5.8125h3.0670625l0.8079375 9.6875h5.8125l0.8079375 -9.6875H30.03125Z" fill="none" stroke="#043e5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 </svg>
