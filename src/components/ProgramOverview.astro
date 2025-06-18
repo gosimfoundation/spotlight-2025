@@ -1,51 +1,51 @@
 ---
 // Packages
-import { Picture } from "astro:assets";
+import { Picture } from "astro:assets"
 
 // Components
-import Button from "components/Button.astro";
+import Button from "components/Button.astro"
 
 // Images
-import why0 from "/public/images/homepage/why0.png";
-import why2 from "/public/images/homepage/why2.png";
-import why3 from "/public/images/homepage/why3.png";
-import why4 from "/public/images/homepage/why4.png";
+import why0 from "/public/images/homepage/why0.png"
+import why2 from "/public/images/homepage/why2.png"
+import why3 from "/public/images/homepage/why3.png"
+import why4 from "/public/images/homepage/why4.png"
 
 interface Props {
-  introTitle?: string;
-  introText?: string;
-  programTitle?: string;
-  programDescription?: string;
-  bulletPoints?: Array<string>;
-  finalistText?: string;
-  conferenceLink?: string;
-  conferenceText?: string;
-  ctaText?: string;
-  ctaLink?: string;
+  introTitle?: string
+  introText?: string
+  programTitle?: string
+  programDescription?: string
+  bulletPoints?: Array<string>
+  finalistText?: string
+  conferenceLink?: string
+  conferenceText?: string
+  ctaText?: string
+  ctaLink?: string
   images?: Array<{
-    src: any;
-    alt: string;
-  }>;
+    src: any
+    alt: string
+  }>
 }
 
 const {
   programTitle = "The Program",
-  programDescription = "GOSIM AI Spotlight is designed to:",
+  programDescription = "GOSIM Hangzhou Spotlight is designed to:",
   bulletPoints = [
-    "Highlight great open-source AI projects, papers, and community efforts, showcasing their innovation and potential impact.",
-    "Provide visibility and recognition for outstanding AI projects, papers, or efforts that deserve a wider audience and broader appreciation.",
-    "Encourage collaboration and foster a sense of collaboration within the AI ecosystem and community through shared goals and teamwork.",
+    "Highlight great open-source projects, papers, and community efforts, showcasing their innovation and potential impact.",
+    "Provide visibility and recognition for outstanding projects, papers, or efforts that deserve a wider audience and broader appreciation.",
+    "Encourage collaboration and foster a sense of community within the open-source ecosystem through shared goals and teamwork.",
   ],
   finalistText = "This year, 10+ finalist (project/paper/model) will be selected and showcased at",
   conferenceLink = "#",
-  conferenceText = "GOSIM AI 2025",
+  conferenceText = "GOSIM Hangzhou 2025",
   images = [
-    { src: why0, alt: "GOSIM AI Spotlight program highlight" },
-    { src: why2, alt: "GOSIM AI Spotlight project showcase" },
-    { src: why3, alt: "GOSIM AI Spotlight innovation" },
-    { src: why4, alt: "GOSIM AI Spotlight community" }
+    { src: why0, alt: "GOSIM Hangzhou Spotlight program highlight" },
+    { src: why2, alt: "GOSIM Hangzhou Spotlight project showcase" },
+    { src: why3, alt: "GOSIM Hangzhou Spotlight innovation" },
+    { src: why4, alt: "GOSIM Hangzhou Spotlight community" },
   ],
-} = Astro.props;
+} = Astro.props
 ---
 
 <section
@@ -88,7 +88,7 @@ const {
         <p class="finalist-text">
           {finalistText}
           <a href={conferenceLink} class="link-primary">{conferenceText}</a> event
-          in Paris, France.
+          in Hangzhou, China.
         </p>
       </div>
 
@@ -296,4 +296,3 @@ const {
     }
   }
 </style>
-

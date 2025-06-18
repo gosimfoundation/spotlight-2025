@@ -1,26 +1,26 @@
 ---
 // Components
-import Layout from "layouts/Layout.astro";
-import Hero from "components/Hero.astro";
-import Intro from "components/Intro.astro";
-import Tracks from "components/Tracks.astro";
-import Cards from "components/Cards.astro";
-import TextAndImage from "components/TextAndImage.astro";
-import TextAndSponsors from "components/TextAndSponsors.astro";
-import PreviousEvents from "components/PreviousEvents.astro";
-import GetTickets from "components/GetTickets.astro";
-import ProgramOverview from "components/ProgramOverview.astro";
+import Layout from "layouts/Layout.astro"
+import Hero from "components/Hero.astro"
+import Intro from "components/Intro.astro"
+import Tracks from "components/Tracks.astro"
+import Cards from "components/Cards.astro"
+import TextAndImage from "components/TextAndImage.astro"
+import TextAndSponsors from "components/TextAndSponsors.astro"
+import PreviousEvents from "components/PreviousEvents.astro"
+import GetTickets from "components/GetTickets.astro"
+import ProgramOverview from "components/ProgramOverview.astro"
 
 // Images
-import SpotlightBlue from "images/homepage/spotlight-badge-ai-2025.svg";
-import GosimShanghai from "images/homepage/gosim-shanghai.png";
-import GosimDelft from "images/homepage/gosim-delft.png";
-import GosimBeijing from "images/homepage/gosim-beijing.png";
+import SpotlightBlue from "images/homepage/spotlight-badge-ai-2025.svg"
+import GosimShanghai from "images/homepage/gosim-shanghai.png"
+import GosimDelft from "images/homepage/gosim-delft.png"
+import GosimBeijing from "images/homepage/gosim-beijing.png"
 ---
 
 <Layout
   title="GOSIM Spotlight Hangzhou 2025"
-  description="GOSIM Spotlight Hangzhou, where exception AI projects are showcased to the world."
+  description="GOSIM Spotlight Hangzhou, where exceptional projects are showcased to the world."
   navDarkMode={true}
   navBackground="header-home"
   pageTransitionName="Home"
@@ -36,8 +36,8 @@ import GosimBeijing from "images/homepage/gosim-beijing.png";
       },
       {
         text: "Learn More",
-        link: "",
-        openInNewTab: true,
+        link: "#program-overview",
+        openInNewTab: false,
       },
     ]}
   />
@@ -49,23 +49,24 @@ import GosimBeijing from "images/homepage/gosim-beijing.png";
   >
     <Intro>
       <h1 class="h3 light split-words animate-read">
-        Are you building something revolutionary related to AI? <b
-          >GOSIM AI Spotlight</b
-        > is your launchpad to the world! This program offers early-stage, global
-        AI projects a unique opportunity to shine at GOSIM AI Paris – Europe’s premier
-        AI conference, taking place from May 6-7, 2025 in the city of lights, Paris,
-        France.
+        Are you building something revolutionary?
+        <p></p>
+        <b>GOSIM Hangzhou Spotlight</b>
+        is your launchpad to the world! This program offers early-stage, global open-source
+        projects a unique opportunity to shine at<p></p> GOSIM Hangzhou – China's
+        premier open-source conference, taking place from Sep 13-14, 2025 in the
+        city of Hangzhou, China.
       </h1>
     </Intro>
   </div>
   <ProgramOverview />
   <Tracks
     title="Participating in GOSIM Spotlight is a simple 3 step process"
-    description="Each year, GOSIM AI Spotlight will shine on a handful of incredible projects, giving them the attention they deserve. Nominees will be judged by an independent judging panel made up of industry experts."
+    description="Each year, GOSIM Spotlight will shine on a handful of incredible projects, giving them the attention they deserve. Nominees will be judged by an independent judging panel made up of industry experts."
     list={[
       {
         title: "Apply or Nominate",
-        text: `Submit Your Project/Paper/Model: Tell us about your innovative AI work and why it deserves to be seen by the world. Anyone can also nominate others projects.`,
+        text: `Submit Your Project/Paper/Model: Tell us about your innovative work and why it deserves to be seen by the world. Anyone can also nominate others' projects.`,
       },
       {
         title: "Evaluation",
@@ -73,12 +74,12 @@ import GosimBeijing from "images/homepage/gosim-beijing.png";
       },
       {
         title: "Selection",
-        text: `Selected projects/papers/models are featured on our website, newsletter, and social media channels, ensuring they reach a global audience.`,
+        text: `Selected projects/papers/models will be showcased at the GOSIM Hangzhou conference. They will also be featured on our website, newsletter, and social media channels, ensuring they reach a global audience.`,
       },
     ]}
     ctaButton={{
       text: "Apply Now",
-      link: "",
+      link: "https://cfp.gosim.org/",
     }}
   />
   <!--
@@ -101,12 +102,12 @@ import GosimBeijing from "images/homepage/gosim-beijing.png";
    -->
   <Cards
     title="Why Apply?"
-    description="Showcase your project to a global AI audience, gain mentorship from top experts, and compete for a spot at GOSIM AI Paris 2025 Demo Day. Selected teams receive travel grants, exclusive visibility, and access to a vibrant community of developers, collaborators, and contributors—all dedicated to advancing the open-source AI movement."
+    description="Showcase your project to a global developer audience, gain mentorship from top experts, and present your project at GOSIM Hangzhou 2025 Spotlights. Selected teams receive travel grants, exclusive visibility, and access to a vibrant community of developers, collaborators, and contributors — all dedicated to advancing the open-source movement."
     cards={[
       {
         title: "Exclusive Showcase",
         description:
-          "Present your project at a dedicated demo table to global AI leaders, developers, and enthusiasts.",
+          "Showcase your project at a dedicated demo booth to global leaders, developers, and enthusiasts.",
         image: "/icons/showcase.svg",
       },
       {
@@ -118,32 +119,32 @@ import GosimBeijing from "images/homepage/gosim-beijing.png";
       {
         title: "Mentorship & Resources",
         description:
-          "Receive guidance from top AI experts and spotlight judges committed to supporting selected projects.",
+          "Receive guidance from top experts and spotlight judges committed to supporting selected projects.",
         image: "/icons/mentorship.svg",
       },
       {
         title: "Global Visibility",
         description:
-          "Compete at Demo Day during GOSIM AI Paris 2025 for exposure to a global tech audience.",
+          "Present your project during GOSIM Hangzhou 2025 for exposure to a global tech audience.",
         image: "/icons/global-visibility.svg",
       },
       {
         title: "Networking & Recognition",
         description:
-          "Connect with mentors, collaborators, and industry leaders while gaining recognition in the AI community.",
+          "Connect with collaborators, developers, and industry leaders while gaining recognition in the open-source community.",
         image: "/icons/networking-recognition.svg",
       },
       {
         title: "Community Growth",
         description:
-          "Attract contributors and establish your project as a leader in the open-source AI ecosystem.",
+          "Attract contributors and establish your project as a leader in the open-source ecosystem.",
         image: "/icons/community-growth.svg",
       },
     ]}
   />
   <GetTickets
     title="Now accepting applications!"
-    text="Know an AI project that deserves recognition? Don't wait - nominate it today and help us shine a spotlight on its potential. Or apply with your own project. Here are the important dates:"
+    text="Know any project that deserves recognition? Don't wait - nominate it today and help us shine a spotlight on its potential. Or apply with your own project. Here are the important dates: Nominations opens on June 18, 2025, and close on August 18, 2025."
     ctaButton={{
       text: "Nominate Project",
       link: "https://cfp.gosim.org/",
