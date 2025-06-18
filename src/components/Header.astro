@@ -1,10 +1,10 @@
 ---
 // Components
-import Button from "components/Button.astro";
-import Logo from "./Logo.astro";
-import NotificationBar from "components/NotificationBar.astro";
+import Button from "components/Button.astro"
+import Logo from "./Logo.astro"
+import NotificationBar from "components/NotificationBar.astro"
 
-const hasNotificationBar = true; // Set this to false when NotificationBar is removed or page will crash
+const hasNotificationBar = true // Set this to false when NotificationBar is removed or page will crash
 
 const links = [
   {
@@ -23,9 +23,9 @@ const links = [
     text: "Rules & Eligibility",
     link: "/faq/",
   },
-];
+]
 
-const slug = Astro.url.pathname;
+const slug = Astro.url.pathname
 ---
 
 <header>
@@ -33,7 +33,7 @@ const slug = Astro.url.pathname;
     hasNotificationBar && (
       <NotificationBar
         text="Winner showcase at GOSIM Hangzhou 2025 • Nominate Project"
-        link=""
+        link="https://cfp.gosim.org/"
       />
     )
   }
@@ -41,7 +41,7 @@ const slug = Astro.url.pathname;
   <div class="floating-ticket-button">
     <Button
       text="Nominate Project"
-      link="/"
+      link="https://cfp.gosim.org/"
       class="btn primary btn-floating btn-hover"
     />
   </div>
@@ -85,7 +85,11 @@ const slug = Astro.url.pathname;
                     </svg>
                   </button>
                 ) : (
-                  <a class="link-click" href={loop.link} data-navigation-toggle="close">
+                  <a
+                    class="link-click"
+                    href={loop.link}
+                    data-navigation-toggle="close"
+                  >
                     <span>{loop.text}</span>
                   </a>
                 )}
@@ -97,7 +101,7 @@ const slug = Astro.url.pathname;
       <div class="box-row box-row-btn">
         <Button
           text="Nominate Project"
-          link="/"
+          link="https://cfp.gosim.org/"
           openInNewTab
           class="btn primary xl btn-hover"
         />
@@ -191,7 +195,7 @@ const slug = Astro.url.pathname;
       <div>
         <Button
           text="Nominate Project"
-          link="/"
+          link="https://cfp.gosim.org/"
           openInNewTab
           class="btn outline btn-hover"
         />
