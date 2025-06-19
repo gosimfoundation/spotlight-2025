@@ -9,8 +9,8 @@ import Button from "components/Button.astro";
 
 interface Props {
   title: string;
-  location: string;
-  date: string;
+  // location: string;
+  // date: string;
   text: string;
   bulletPoints?: Array<string>;
   ctaButton?: {
@@ -24,9 +24,9 @@ const {
   title,
   text,
   bulletPoints = [
-    "Application period ends: Monday, April 15 at 11:59 PM (UTC - 8)",
-    "Selected candidates will be announced by: April 26, 2025",
-    "Spotlight Showcase and Lightning Talks: May 6-7, 2025",
+    "Application period ends: Monday, August 18 at 11:59 PM (UTC - 8)",
+    "Selected candidates will be announced by: August 25, 2025",
+    "Spotlight Showcase and Lightning Talks: September 13-14, 2025",
   ],
   ctaButton,
 } = Astro.props;
