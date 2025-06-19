@@ -1,0 +1,94 @@
+---
+// Import the projects data
+import projectsData from "json/Projects.json"
+
+interface Project {
+  title: string
+  content: string
+  url?: string
+}
+
+interface Props {
+  projects?: Project[]
+}
+
+// Use the provided props or default to the JSON data
+const { projects = projectsData.projects } = Astro.props
+---
+
+<section
+  class="section section-projects"
+  id="projects"
+  data-theme-section="light"
+  data-bg-section="light"
+  data-scroll-section
+>
+  <div class="container">
+    <div class="row row-audience grid">
+      {projects.map((project: Project) => (
+        <div class="col project-card">
+          <div class="project-content">
+            <h4>{project.title}</h4>
+            <p>{project.content}</p>
+            {project.url && (
+              <a href={project.url} class="project-link" target="_blank" rel="noopener noreferrer">
+                Learn More →
+              </a>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-projects {
+    padding: var(--section-padding) 0;
+  }
+
+  .section-projects .row-audience {
+    --columns: 2;
+  }
+
+  .project-card {
+    padding: 30px;
+    gap: 20px;
+    background: #e9ecec;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .project-content p {
+
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    color: #076597;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .project-link:hover {
+    color: #054a6b;
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 720px) {
+    .section-projects .row-audience {
+      --columns: 1;
+      gap: 0.75em;
+    }
+  }
+</style>

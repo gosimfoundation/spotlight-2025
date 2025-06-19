@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "title": "Open Source AI Framework",
+      "content": "A revolutionary open-source framework that democratizes AI development by providing accessible tools for machine learning model creation and deployment. This project has already been adopted by over 10,000 developers worldwide.",
+      "url": "https://github.com/example/ai-framework"
+    },
+    {
+      "title": "Sustainable Development Platform",
+      "content": "An innovative platform that connects developers with environmental organizations to create technology solutions for climate change challenges. Features real-time collaboration tools and impact tracking.",
+      "url": "https://github.com/example/sustainable-dev"
+    },
+    {
+      "title": "Community-Driven Education Tool",
+      "content": "A collaborative learning platform that enables developers to create and share educational content, fostering knowledge exchange across global developer communities. Supports multiple programming languages and frameworks.",
+      "url": "https://github.com/example/edu-platform"
+    },
+    {
+      "title": "Decentralized Data Protocol",
+      "content": "A cutting-edge protocol that enables secure, decentralized data sharing while maintaining user privacy and control. This project addresses critical challenges in data sovereignty and digital rights.",
+      "url": "https://github.com/example/data-protocol"
+    },
+    {
+      "title": "Accessibility-First Web Framework",
+      "content": "A web development framework built with accessibility as a core principle, making it easier for developers to create inclusive digital experiences. Includes built-in WCAG compliance tools and testing.",
+      "url": "https://github.com/example/accessibility-framework"
+    },
+    {
+      "title": "Open Source Healthcare Solutions",
+      "content": "A comprehensive suite of healthcare applications designed to improve patient care and streamline medical workflows. Built with privacy and security as top priorities, following HIPAA compliance standards.",
+      "url": "https://github.com/example/healthcare-suite"
+    }
+  ]
+} 

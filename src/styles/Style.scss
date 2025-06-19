@@ -814,6 +814,7 @@ footer {
 .section-home-intro {
    background-color: transparent;
    z-index: 2;
+   background-color: #f8f7ff;
    padding-top: calc(var(--section-padding) * 1.5);
 }
 
@@ -1368,5 +1369,27 @@ footer {
    .section-register-gosim .overlay-wrap .overlay-background {
       transform: scale(-1, 1) translate(0%, 55%);
       height: 70%;
+   }
+}
+
+.section-agenda-grid .list-group {
+   display: flex;
+   flex-direction: column;
+   gap: var(--row-gap);
+   padding-top: var(--section-padding);
+}
+
+.section-agenda-grid .list-group[data-filter-status="not-active"] {
+   display: none;
+}
+
+.section-agenda-grid .row-list {
+   flex-direction: column;
+   gap: 1em;
+}
+
+@media screen and (max-width: 600px) {
+   .section-agenda-grid .list-group {
+      padding-top: calc(var(--row-gap) * 2);
    }
 }

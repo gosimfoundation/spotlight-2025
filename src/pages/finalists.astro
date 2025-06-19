@@ -1,7 +1,9 @@
 ---
 // Components
 import Layout from "layouts/Layout.astro";
+import Projects from "components/Projects.astro";
 import HeroFinalists from "components/HeroFinalists.astro";
+import Intro from "components/Intro.astro";
 ---
 
 <Layout
@@ -14,4 +16,17 @@ import HeroFinalists from "components/HeroFinalists.astro";
   <HeroFinalists
     date="Here are the 12 projects selected for the GOSIM AI Spotlight 2025"
   />
+  <Intro>
+    <h1 class="h3 light split-words animate-read">
+      Congratulations to the 12 projects selected!
+      <p></p>
+      Come see them at their demo <b
+        ><a href="https://paris2025.gosim.org/">GOSIM AI Paris</a></b
+      >(May 6-7) in Paris. GOSIM AI Paris attendees can also listen to their
+      lightning talks on <b
+        ><a href="https://paris2025.gosim.org/schedule">May 6-7</a></b
+      >.
+    </h1>
+  </Intro>
+  <Projects />
 </Layout>
