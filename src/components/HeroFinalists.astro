@@ -1,0 +1,87 @@
+---
+// Components
+import Button from "components/Button.astro";
+
+interface Props {
+  date?: string;
+  location?: string;
+  links?: Array<{
+    text: string;
+    link: string;
+    openInNewTab: boolean;
+  }>;
+}
+
+const { date, location, links } = Astro.props;
+---
+
+<section
+  class="section section-home-header full-height"
+  data-theme-section="dark"
+  style="background-color: #616D9C"
+  data-bg-section="header-home"
+>
+  <div class="overlay overlay-background overlay-background-video">
+    <div class="styled-video playpause overlay">
+      <video
+        class="overlay"
+        preload="auto"
+        autoplay
+        loop
+        muted
+        webkit-playsinline
+        playsinline
+        poster=""
+      >
+        <source src="/videos/bg-finalist.webm" type="video/webm" />
+        <source src="/videos/bg-finalist.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="overlay overlay-gradient-v2"></div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="col col-title">
+          <h1>Spotlight 2025 Finalists</h1>
+        </div>
+
+        <div class="finalists">
+          {date && <p>{date}</p>}
+        </div>
+
+        <div class="btn-home-wrap">
+          {
+            links?.map((loop) => (
+              <Button
+                text={loop.text}
+                link={loop.link}
+                openInNewTab={loop?.openInNewTab}
+                class="btn light xl btn-hover fade-in-last"
+              />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .col-title {
+    margin-top: 6%;
+  }
+  .finalists {
+    max-width: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 1.5rem;
+    & > p {
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+</style>
