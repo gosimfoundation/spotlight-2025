@@ -1,21 +1,22 @@
 ---
 // Components
-import Layout from "layouts/Layout.astro"
-import Hero from "components/Hero.astro"
-import Intro from "components/Intro.astro"
-import Tracks from "components/Tracks.astro"
-import Cards from "components/Cards.astro"
-import TextAndImage from "components/TextAndImage.astro"
-import TextAndSponsors from "components/TextAndSponsors.astro"
-import PreviousEvents from "components/PreviousEvents.astro"
-import GetTickets from "components/GetTickets.astro"
-import ProgramOverview from "components/ProgramOverview.astro"
+import Layout from "layouts/Layout.astro";
+import Hero from "components/Hero.astro";
+import Intro from "components/Intro.astro";
+import Tracks from "components/Tracks.astro";
+import Cards from "components/Cards.astro";
+import TextAndImage from "components/TextAndImage.astro";
+import TextAndSponsors from "components/TextAndSponsors.astro";
+import PreviousEvents from "components/PreviousEvents.astro";
+import GetTickets from "components/GetTickets.astro";
+import ProgramOverview from "components/ProgramOverview.astro";
+import Timeline from "components/Timeline.astro";
 
 // Images
-import SpotlightBlue from "images/homepage/spotlight-badge-ai-2025.svg"
-import GosimShanghai from "images/homepage/gosim-shanghai.png"
-import GosimDelft from "images/homepage/gosim-delft.png"
-import GosimBeijing from "images/homepage/gosim-beijing.png"
+import SpotlightBlue from "images/homepage/spotlight-badge-ai-2025.svg";
+import GosimShanghai from "images/homepage/gosim-shanghai.png";
+import GosimDelft from "images/homepage/gosim-delft.png";
+import GosimBeijing from "images/homepage/gosim-beijing.png";
 ---
 
 <Layout
@@ -142,6 +143,7 @@ import GosimBeijing from "images/homepage/gosim-beijing.png"
       },
     ]}
   />
+  <Timeline />
   <GetTickets
     title="Now accepting applications!"
     text="Know any project that deserves recognition? Don't wait - nominate it today and help us shine a spotlight on its potential. Or apply with your own project. Here are the important dates: Nominations opens on June 18, 2025, and close on August 18, 2025."
