@@ -1,3 +1,31 @@
+---
+export interface Props {
+  events: Array<{
+    date: string;
+    title: string;
+  }>;
+}
+
+const { events = [
+  {
+    date: "26 April",
+    title: "Submit your entries"
+  },
+  {
+    date: "26 April - 4 May", 
+    title: "Judging"
+  },
+  {
+    date: "10 May",
+    title: "Nominations announced"
+  },
+  {
+    date: "29 May",
+    title: "Winners announced on stage"
+  }
+] } = Astro.props;
+---
+
 <section
   class="section section-timeline"
   id="timeline"
@@ -10,37 +38,15 @@
     <div class="row">
       <div class="timeline-section">
         <div class="timeline-container">
-          <div class="timeline-item top">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">
-              <h4>26 April</h4>
-              <p>Submit your entries</p>
+          {events.map((event, index) => (
+            <div class={`timeline-item ${index % 2 === 0 ? 'top' : 'bottom'}`}>
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">
+                <h4>{event.date}</h4>
+                <p>{event.title}</p>
+              </div>
             </div>
-          </div>
-
-          <div class="timeline-item bottom">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">
-              <h4>26 April - 4 May</h4>
-              <p>Judging</p>
-            </div>
-          </div>
-
-          <div class="timeline-item top">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">
-              <h4>10 May</h4>
-              <p>Nominations announced</p>
-            </div>
-          </div>
-
-          <div class="timeline-item bottom">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">
-              <h4>29 May</h4>
-              <p>Winners announced on stage</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
