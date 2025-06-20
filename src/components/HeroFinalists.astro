@@ -1,18 +1,20 @@
 ---
 // Components
-import Button from "components/Button.astro";
+import Button from "components/Button.astro"
 
 interface Props {
-  date?: string;
-  location?: string;
+  date?: string
+  location?: string
+  category?: string
+  tagline?: string
   links?: Array<{
-    text: string;
-    link: string;
-    openInNewTab: boolean;
-  }>;
+    text: string
+    link: string
+    openInNewTab: boolean
+  }>
 }
 
-const { date, location, links } = Astro.props;
+const { date, location, category, tagline, links } = Astro.props
 ---
 
 <section
@@ -44,11 +46,11 @@ const { date, location, links } = Astro.props;
     <div class="row">
       <div class="col">
         <div class="col col-title">
-          <h1>Spotlight 2025 Finalists</h1>
+          <h1>{category} Spotlight Finalists</h1>
         </div>
 
         <div class="finalists">
-          {date && <p>{date}</p>}
+          {tagline && <p>{tagline}</p>}
         </div>
 
         <div class="btn-home-wrap">
