@@ -4,6 +4,9 @@ import Layout from "layouts/Layout.astro"
 import Projects from "components/Projects.astro"
 import HeroFinalists from "components/HeroFinalists.astro"
 import Intro from "components/Intro.astro"
+import projectsData from "json/Projects-rust2025.json"
+
+const numProjs = projectsData.projects.length
 ---
 
 <Layout
@@ -14,21 +17,26 @@ import Intro from "components/Intro.astro"
   pageTransitionName="Home"
 >
   <HeroFinalists
-    category="Rust",
-    date="May 13-14, 2025",
-    location="Utrecht, The Netherlands",
-    tagline="Here are the 12 projects selected for the GOSIM Rust Spotlight 2025"
+    category="Rust"
+    ,
+    date="May 13-14, 2025"
+    ,
+    location="Utrecht, The Netherlands"
+    ,
+    tagline={"Here are the " +
+      numProjs +
+      " projects selected for the GOSIM Rust Spotlight 2025"}
   />
   <Intro>
     <h1 class="h3 light split-words animate-read">
-      Congratulations to the 12 projects selected!
+      Congratulations to the {numProjs} projects selected!
       <p></p>
       Come learn about their projects at the spotlight demo booths at <b>
         <a href="https://2025.rustweek.org/">RustWeek 2025</a>.
-        </b>Conference attendees can also listen to their lightning talks on<b>
+      </b>Conference attendees can also listen to their lightning talks on<b>
         <a href="https://2025.rustweek.org/">May 13-14</a></b
       >.
     </h1>
   </Intro>
-  <Projects />
+  <Projects projects={projectsData.projects} />
 </Layout>

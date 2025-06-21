@@ -1,0 +1,54 @@
+{
+  "projects": [
+    {
+      "title": "AccessKit",
+      "content": "Accessibility infrastructure for UI toolkits: AccessKit makes it easier to implement accessibility, for screen readers and other assistive technologies, in toolkits that render their own user interface elements. It provides a cross-platform, cross-language abstraction over accessibility APIs, so toolkit developers only have to implement accessibility once",
+      "link": "https://github.com/AccessKit/accesskit"
+    },
+    {
+      "title": "Autodiff",
+      "content": "We propose to add automatic differentiation to Rust. This would allow Rust users to compute derivatives of arbitrary functions, which is the essential enabling technology for differentiable programming. This feature would open new opportunities for Rust in scientific computing, machine learning, robotics, computer vision, probabilistic analysis, and other fields",
+      "link": "https://enzyme.mit.edu/index.fcgi/rust/"
+    },
+    {
+      "title": "Charon",
+      "content": "Interface with the rustc compiler for the purpose of program verification: Charon (pronounced 'Ka-ron') extracts the complete contents of a Rust crate (and its dependencies) into a JSON file",
+      "link": "https://github.com/AeneasVerif/charon"
+    },
+    {
+      "title": "Dagrs",
+      "content": "A DAG engine build by Rust: Dagrs is an easy-to-use, high-performance asynchronous task programming framework written in Rust. Dagrs follows the concept of Flow based Programming, and aims to provide users with convenient programming interface",
+      "link": "https://github.com/dagrs-dev/dagrs"
+    },
+    {
+      "title": "mantra",
+      "content": "Manuels ANforderungs-TRAcing (or MANaged TRAcing): mantra is a tool for easier tracing between requirements, implementation, and tests",
+      "link": "https://github.com/mhatzl/mantra"
+    },
+    {
+      "title": "RMK",
+      "content": "Rust keyboard firmware library with layers, macros, real-time keymap editing, wireless(BLE) and split support",
+      "link": "https://github.com/haobogu/rmk"
+    },
+    {
+      "title": "rustc_codegen_clr",
+      "content": "A Rust compiler backend targeting CIL(.NET IR) and C: rustc_codegen_clr is an experimental Rust compiler backend(plugin), which allows you to transpile Rust into .NET assebmlies, or C source files",
+      "link": "https://github.com/FractalFir/rustc_codegen_clr"
+    },
+    {
+      "title": "Tango",
+      "content": "Rust microbenchmarking harness based on paired-testing methodology: Introducing Tango.rs, a novel benchmarking framework that employs paired benchmarking to assess code performance. This approach capitalizes on the fact that it's far more efficient to measure the performance difference between two simultaneously executing functions compared to two functions executed consecutively",
+      "link": "https://github.com/bazhenov/tango"
+    },
+    {
+      "title": "Volo",
+      "content": "Rust RPC framework with high-performance and strong-extensibility for building micro-services. Volo is a high-performance and strong-extensibility Rust RPC framework that helps developers build microservices",
+      "link": "https://github.com/cloudwego/volo"
+    },
+    {
+      "title": "Wild",
+      "content": "A very fast linker for Linux: Wild is a linker with the goal of being very fast for iterative development",
+      "link": "https://github.com/davidlattimore/wild"
+    }
+  ]
+}

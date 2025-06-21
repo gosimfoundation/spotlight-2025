@@ -4,6 +4,9 @@ import Layout from "layouts/Layout.astro"
 import Projects from "components/Projects.astro"
 import HeroFinalists from "components/HeroFinalists.astro"
 import Intro from "components/Intro.astro"
+import projectsData from "json/Projects-ai2025.json"
+
+const numProjs = projectsData.projects.length
 ---
 
 <Layout
@@ -14,14 +17,17 @@ import Intro from "components/Intro.astro"
   pageTransitionName="Home"
 >
   <HeroFinalists
-    category="AI",
-    date="May 6-7, 2025",
-    location="Paris, France",
+    category="AI"
+    ,
+    date="May 6-7, 2025"
+    ,
+    location="Paris, France"
+    ,
     tagline="Here are the 12 projects selected for the GOSIM AI Spotlight 2025"
   />
   <Intro>
     <h1 class="h3 light split-words animate-read">
-      Congratulations to the 12 projects selected!
+      Congratulations to the {numProjs} projects selected!
       <p></p>
       Come learn about their projects at the spotlight demo booths at <b>
         <a href="https://paris2025.gosim.org/">GOSIM AI Paris</a>.
@@ -30,5 +36,5 @@ import Intro from "components/Intro.astro"
       >.
     </h1>
   </Intro>
-  <Projects />
+  <Projects projects={projectsData.projects} />
 </Layout>

@@ -1,0 +1,64 @@
+{
+  "projects": [
+    {
+      "title": "Aidge",
+      "content": "The Eclipse Aidge platform is a comprehensive solution for fast and accurate Deep Neural Network (DNN) simulation and full and automated DNN-based applications building. The platform integrates database construction, data pre-processing, network building, benchmarking and hardware export to various targets. It is particularly useful for DNN design and exploration, allowing simple and fast prototyping of DNN with different topologies. It is possible to define and learn multiple network topology variations and compare the performances (in terms of recognition rate and computationnal cost) automatically. Export hardware targets include CPU, DSP and GPU with OpenMP, OpenCL, Cuda, cuDNN and TensorRT programming models as well as custom hardware IP code generation with High-Level Synthesis for FPGA and dedicated configurable DNN accelerator IP.",
+      "url": "https://gitlab.eclipse.org/eclipse/aidge"
+    },
+    {
+      "title": "Code Carbon",
+      "content": "Track emissions from Compute and recommend ways to reduce their impact on the environment. CodeCarbon started with a quite simple question: What is the carbon emission impact of my computer program? 🤷 We found some global data like 'computing currently represents roughly 0.5% of the world’s energy consumption' but nothing on our individual/organisation level impact. At CodeCarbon, we believe, along with Niels Bohr, that 'Nothing exists until it is measured'. So we found a way to estimate how much CO2 we produce while running our code.",
+      "url": "https://github.com/mlco2/codecarbon"
+    },
+    {
+      "title": "HAMi",
+      "content": "Open, Device Virtualization, VGPU, Heterogeneous AI Computing. HAMi (Heterogeneous AI Computing Virtualization Middleware) formerly known as k8s-vGPU-scheduler, is an 'all-in-one' chart designed to manage Heterogeneous AI Computing Devices in a k8s cluster. It can provide the ability to share Heterogeneous AI devices and provide resource isolation among tasks.",
+      "url": "https://github.com/Project-HAMi/HAMi"
+    },
+    {
+      "title": "LlamaEdge",
+      "content": "The easiest & fastest way to run customized and fine-tuned LLMs locally or on the edge. The LlamaEdge project makes it easy for you to run LLM inference apps and create OpenAI-compatible API services for open-source LLMs locally.",
+      "url": "https://github.com/LlamaEdge/LlamaEdge"
+    },
+    {
+      "title": "LlamaFactory",
+      "content": "Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024). LLaMA Factory is an easy-to-use and efficient platform for training and fine-tuning large language models. With LLaMA Factory, you can fine-tune hundreds of pre-trained models locally without writing any code.",
+      "url": "https://github.com/hiyouga/LLaMA-Factory"
+    },
+    {
+      "title": "MoFA",
+      "content": "MoFA - Modular Framework for Agents. Modular, Compositional and Programmable. MoFA is a software framework for building AI agents through a composition-based approach. Using MoFA, AI agents can be constructed via templates and combined in layers to form more powerful Super Agents.",
+      "url": "https://github.com/moxin-org/mofa"
+    },
+    {
+      "title": "Open Duck Mini 2",
+      "content": "Making a mini version of the BDX droid. We are making a miniature version of the BDX Droid by Disney. It is about 42 centimeters tall with its legs extended. The full BOM cost should be under $400 !",
+      "url": "https://github.com/apirrone/Open_Duck_Mini"
+    },
+    {
+      "title": "SpeakLeash",
+      "content": "The Bielik Project delivers not only a family of open-source language models (1.5B, 4.5B, and 11B parameters) but also a complete tooling ecosystem designed to empower others to train, fine-tune, and evaluate LLMs with ease. One of the project’s core features is its end-to-end toolchain—spanning datasets, benchmarking, training, and fine-tuning frameworks—which enables any research group or organization to build their own models through base model fine-tuning or continuous pretraining.",
+      "url": "https://github.com/speakleash"
+    },
+    {
+      "title": "ViDoRAG: Visual Document",
+      "content": "ViDoRAG: Visual Document Retrieval-Augmented Generation via Dynamic Iterative Reasoning Agents. We propose to add automatic differentiation to Rust. This would allow Rust users to compute derivatives of arbitrary functions, which is the essential enabling technology for differentiable programming. This feature would open new opportunities for Rust in scientific computing, machine learning, robotics, computer vision, probabilistic analysis, and other fields",
+      "url": "https://github.com/Alibaba-NLP/ViDoRAG"
+    },
+    {
+      "title": "Automated Proof Generation for Rust Code via Self-Evolution",
+      "content": "Ensuring correctness is crucial for code generation. Formal verification offers a definitive assurance of correctness, but demands substantial human effort in proof construction and hence raises a pressing need for automation. The primary obstacle lies in the severe lack of data-there is much fewer proofs than code snippets for Large Language Models (LLMs) to train upon. In this paper, we introduce SAFE, a framework that overcomes the lack of human-written proofs to enable automated proof generation of Rust code. SAFE establishes a self-evolving cycle where data synthesis and fine-tuning collaborate to enhance the model capability, leveraging the definitive power of a symbolic verifier in telling correct proofs from incorrect ones. SAFE also re-purposes the large number of synthesized incorrect proofs to train the self-debugging capability of the fine-tuned models, empowering them to fix incorrect proofs based on the verifier's feedback. SAFE demonstrates superior efficiency and precision compared to GPT-4o. Through tens of thousands of synthesized proofs and the self-debugging mechanism, we improve the capability of open-source models, initially unacquainted with formal verification, to automatically write proofs for Rust code. This advancement leads to a significant improvement in performance, achieving a 52.52% accuracy rate in a benchmark crafted by human experts, a significant leap over GPT-4o's performance of 14.39%.",
+      "url": "https://arxiv.org/abs/2410.15756"
+    },
+    {
+      "title": "ColPali: Efficient Document Retrieval with Vision Language Models",
+      "content": "Documents are visually rich structures that convey information through text, but also figures, page layouts, tables, or even fonts. Since modern retrieval systems mainly rely on the textual information they extract from document pages to index documents -often through lengthy and brittle processes-, they struggle to exploit key visual cues efficiently. This limits their capabilities in many practical document retrieval applications such as Retrieval Augmented Generation (RAG). To benchmark current systems on visually rich document retrieval, we introduce the Visual Document Retrieval Benchmark ViDoRe, composed of various page-level retrieval tasks spanning multiple domains, languages, and practical settings. The inherent complexity and performance shortcomings of modern systems motivate a new concept; doing document retrieval by directly embedding the images of the document pages. We release ColPali, a Vision Language Model trained to produce high-quality multi-vector embeddings from images of document pages. Combined with a late interaction matching mechanism, ColPali largely outperforms modern document retrieval pipelines while being drastically simpler, faster and end-to-end trainable.",
+      "url": "https://github.com/illuin-tech/colpali"
+    },
+    {
+      "title": "Think Small, Act Big: Primitive Prompt Learning for Lifelong Robot Manipulation",
+      "content": "Building a lifelong robot that can effectively leverage prior knowledge for continuous skill acquisition remains significantly challenging. Despite the success of experience replay and parameter-efficient methods in alleviating catastrophic forgetting problem, naively applying these methods causes a failure to leverage the shared primitives between skills. To tackle these issues, we propose Primitive Prompt Learning (PPL), to achieve lifelong robot manipulation via reusable and extensible primitives. Within our two stage learning scheme, we first learn a set of primitive prompts to represent shared primitives through multi-skills pre-training stage, where motion-aware prompts are learned to capture semantic and motion shared primitives across different skills. Secondly, when acquiring new skills in lifelong span, new prompts are appended and optimized with frozen pretrained prompts, boosting the learning via knowledge transfer from old skills to new ones. For evaluation, we construct a large-scale skill dataset and conduct extensive experiments in both simulation and real-world tasks, demonstrating PPL's superior performance over state-of-the-art methods.",
+      "url": "https://www.arxiv.org/abs/2504.00420"
+    }
+  ]
+}
