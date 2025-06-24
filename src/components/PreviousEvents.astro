@@ -21,7 +21,7 @@ const { title, events } = Astro.props;
     data-theme-section="light"
     data-bg-section="lightgray"
 >
-    <div class="container wide">
+    <div class="container">
         <div class="row">
             <div class="col">
                 <h2>{title}</h2>
@@ -54,7 +54,7 @@ const { title, events } = Astro.props;
                                 </div>
                             </div>
                             <div class="card-row card-row-info">
-                                <h3 class="h5">{loop.title}</h3>
+                                <h4 style="padding-bottom: 16px;">{loop.title}</h4>
                                 <p class="dateb">{loop.date}</p>
                                 <p>{loop.description}</p>
                             </div>

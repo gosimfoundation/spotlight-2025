@@ -928,7 +928,28 @@ footer {
       max-width: 100%;
    }
 }
+/* ------------------------- Section - Speakers Featured -------------------------------------------------- */
 
+.section-speakers-featured .row .col {
+   width: 100%;
+   align-items: center;
+}
+
+.section-speakers-featured .flickity-slider-group {
+   padding: calc(var(--row-gap) * 3) 0 calc(var(--row-gap) * 2) 0;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+   .section-speakers-featured .row .col-title {
+      align-items: flex-start;
+   }
+
+   .section-speakers-featured .flickity-slider-group {
+      padding: calc(var(--row-gap) * 2) 0 calc(var(--row-gap) * 2) 0;
+   }
+}
 /* ------------------------- Section - Footer -------------------------------------------------- */
 
 [data-bg-section="lightgray"]+.footer-round {
@@ -1151,6 +1172,26 @@ footer {
    }
 }
 
+/* ------------------------- Section - Resources -------------------------------------------------- */
+
+.section-resources-featured .row .col {
+   width: 100%;
+}
+
+.section-resources-featured .flickity-slider-group {
+   padding-top: calc(var(--row-gap) * 2);
+}
+
+.section-resources-featured .flickity-slider {
+   display: flex;
+   align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+   .section-resources-featured .flickity-slider-group {
+      padding: calc(var(--row-gap) * 2) 0 0 0;
+   }
+}
 
 /* ------------------------- Newsletter Button -------------------------------------------------- */
 

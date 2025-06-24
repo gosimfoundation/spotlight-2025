@@ -8,12 +8,11 @@ import Cards from "components/Cards.astro";
 import GetTickets from "components/GetTickets.astro";
 import ProgramOverview from "components/ProgramOverview.astro";
 import Timeline from "components/Timeline.astro";
+import PreviousEvents from "components/PreviousEvents.astro";
 
 // Images
-import SpotlightBlue from "images/homepage/spotlight-badge-ai-2025.svg";
-import GosimShanghai from "images/homepage/gosim-shanghai.png";
-import GosimDelft from "images/homepage/gosim-delft.png";
-import GosimBeijing from "images/homepage/gosim-beijing.png";
+import GosimParis1 from "images/homepage/sl-paris1.png";
+import GosimParis2 from "images/homepage/sl-paris2.png";
 ---
 
 <Layout
@@ -157,6 +156,27 @@ import GosimBeijing from "images/homepage/gosim-beijing.png";
       {
         date: "September 13-14, 2025",
         title: "Spotlight showcase",
+      },
+    ]}
+  />
+  <PreviousEvents
+    title="Previous Spotlight Events"
+    events={[
+      {
+        title: "Rust Spotlight: Paris",
+        date: "May 13-17, 2025",
+        description:
+          "Celebrating the brilliance and creativity of open-source projects developed with Rust.",
+        image: GosimParis1,
+        link: "",
+      },
+      {
+        title: "AI Spotlight: Paris",
+        date: "May 6-7, 2025",
+        description:
+          "Propelling Open-Source Robotics Forward: Innovating community-driven robot design and more.",
+        image: GosimParis2,
+        link: "",
       },
     ]}
   />
