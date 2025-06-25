@@ -1,31 +1,31 @@
 ---
 // Packages
-import { Picture } from "astro:assets"
+import { Picture } from "astro:assets";
 
 // Components
-import Button from "components/Button.astro"
+import Button from "components/Button.astro";
 
 // Images
-import why0 from "/public/images/homepage/why0.png"
-import why2 from "/public/images/homepage/why2.png"
-import why3 from "/public/images/homepage/why3.png"
-import why4 from "/public/images/homepage/why4.png"
+import why0 from "/public/images/homepage/why0.png";
+import why2 from "/public/images/homepage/why2.png";
+import why3 from "/public/images/homepage/why3.png";
+import why4 from "/public/images/homepage/why4.png";
 
 interface Props {
-  introTitle?: string
-  introText?: string
-  programTitle?: string
-  programDescription?: string
-  bulletPoints?: Array<string>
-  finalistText?: string
-  conferenceLink?: string
-  conferenceText?: string
-  ctaText?: string
-  ctaLink?: string
+  introTitle?: string;
+  introText?: string;
+  programTitle?: string;
+  programDescription?: string;
+  bulletPoints?: Array<string>;
+  finalistText?: string;
+  conferenceLink?: string;
+  conferenceText?: string;
+  ctaText?: string;
+  ctaLink?: string;
   images?: Array<{
-    src: any
-    alt: string
-  }>
+    src: any;
+    alt: string;
+  }>;
 }
 
 const {
@@ -45,7 +45,7 @@ const {
     { src: why3, alt: "GOSIM Hangzhou Spotlight innovation" },
     { src: why4, alt: "GOSIM Hangzhou Spotlight community" },
   ],
-} = Astro.props
+} = Astro.props;
 ---
 
 <section
@@ -108,6 +108,9 @@ const {
                   />
                 </div>
               ))}
+              <div class="gradient-circle-wrap">
+                <div class="gradient-circle" />
+              </div>
             </div>
           ) : (
             <div class="image-grid">
@@ -234,6 +237,7 @@ const {
     aspect-ratio: 1/1;
     border-radius: 0.75rem;
     overflow: hidden;
+    z-index: 1;
   }
 
   .image-2,
@@ -256,7 +260,6 @@ const {
   @media (min-width: 992px) {
     .program-grid {
       grid-template-columns: 1fr 1fr;
-      gap: 2rem;
     }
 
     .image-grid {

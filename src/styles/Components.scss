@@ -226,10 +226,10 @@
 }
 
 .gradient-circle {
-   --gradient-size: calc(var(--title-size) * 9);
+   --gradient-size: calc(var(--title-size) * 6);
    width: var(--gradient-size);
    height: var(--gradient-size);
-   background: radial-gradient(circle, var(--color-primary) 0%, rgba(var(--color-dark-rgb), 0) 66%);
+   background: rgba(189, 195, 255, 1);
    position: absolute;
    opacity: 0.4;
    pointer-events: none;
