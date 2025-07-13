@@ -6,5 +6,6 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   integrations: [sitemap()],
-  site: "https://testnew.gosim.org",
+  site: 'https://gosimfoundation.github.io',
+  base: '/spotlight-2025/',
 });
