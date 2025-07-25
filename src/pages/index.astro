@@ -4,6 +4,7 @@ import Layout from "layouts/Layout.astro"
 import Hero from "components/Hero.astro"
 import Intro from "components/Intro.astro"
 import Tracks from "components/Tracks.astro"
+import Button from "components/Button.astro"
 import Cards from "components/Cards.astro"
 import GetTickets from "components/GetTickets.astro"
 import ProgramOverview from "components/ProgramOverview.astro"
@@ -42,7 +43,7 @@ import GosimParis2 from "images/homepage/sl-paris2.png"
     class="section-wrap"
     id="intro"
     data-theme-section="light"
-    data-bg-section="light"
+    data-bg-section="lightgray"
   >
     <Intro>
       <h1 class="h3 light split-words animate-read">
@@ -53,13 +54,52 @@ import GosimParis2 from "images/homepage/sl-paris2.png"
         to co-create with us?
         <br />
         <p>✨</p>
+      </h1>
+      <h1 class="h5 light split-words animate-read">
         AI for Humanity Spotlight is an international showcase for projects that
-        explore how generative AI can foster empathy, shared creativity, and ethical
-        coexistence.
-        <br />
+        explore how generative AI can foster empathy, shared creativity, and
+        ethical coexistence.
+        <div style="margin: 1rem 0;" />
         This spotlight will take place as part of GOSIM Hangzhou, China's leading
         open-source conference, from September 13–14, 2025, in Hangzhou, China.
       </h1>
+      <br />
+      <h1 class="h3 light split-words animate-read">
+        This year’s edition features two distinct tracks:
+      </h1>
+      <div
+        style="display: flex; gap: 2rem; align-items: flex-start; margin-top: 1.5rem;"
+      >
+        <div style="flex: 1;">
+          <ul style="margin-bottom: 1rem;" class="h5 light">
+            <li>
+              <span style="font-weight: bold;">Applied AI</span> – showcasing practical products and solutions
+              powered by generative AI
+            </li>
+          </ul>
+          <Button
+            text="Submit Applied AI Project"
+            link="https://forms.office.com/r/gfBD25fxJb"
+            openInNewTab={true}
+            class="btn light sm btn-hover fade-in-last"
+          />
+        </div>
+
+        <div style="flex: 1;">
+          <ul style="margin-bottom: 1rem;" class="h5 light">
+            <li>
+              <span style="font-weight: bold;">Interactive Demos</span> – with applications in education,
+              mental health, elder care, and social services
+            </li>
+          </ul>
+          <Button
+            text="Submit Interactive Demo Project"
+            link="https://forms.office.com/r/cNm1SReSfX"
+            openInNewTab={true}
+            class="btn light sm btn-hover fade-in-last"
+          />
+        </div>
+      </div>
     </Intro>
   </div>
   <ProgramOverview />
