@@ -1,0 +1,224 @@
+<section
+  class="section section-newsletter"
+  data-theme-section="light"
+  data-bg-section="light"
+  id="newsletter"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col newsletter-content">
+        <h2>Join the Community</h2>
+        <p class="newsletter-description">
+          Stay connected with GOSIM Spotlight and open-source community by
+          subscribing to our newsletter and following us on social media.
+        </p>
+
+        <form id="newsletter-form" class="newsletter-form">
+          <div class="newsletter-box">
+            <div class="mc-field-group">
+              <label for="email-address" class="sr-only">Email address</label>
+              <input
+                id="email-address"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                placeholder="Enter your email"
+              />
+              <div class="btn primary">
+                <button type="submit" id="submit-btn" class="btn-click">
+                  <div class="btn-content">
+                    <div class="btn-fill"></div>
+                    <span>Subscribe</span>
+                  </div>
+                  <div class="border-box"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div id="status-message" class="newsletter-status hidden"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const API_URL = 'https://cfp.gosim.org/api/subscribe';
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("newsletter-form")
+    const emailInput = document.getElementById("email-address")
+    const submitBtn = document.getElementById("submit-btn")
+    const statusMessage = document.getElementById("status-message")
+
+    if (form && emailInput && submitBtn && statusMessage) {
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault()
+
+        const email = (emailInput as HTMLInputElement).value
+        if (!email) return
+
+        // Update button state
+        const buttonSpan = submitBtn.querySelector("span")
+        if (buttonSpan) buttonSpan.textContent = "Submitting..."
+        ;(submitBtn as HTMLButtonElement).disabled = true
+        statusMessage.classList.add("hidden")
+
+        try {
+          const response = await fetch(API_URL, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email: email,
+              page: "spotlight-aigc",
+            }),
+          })
+
+          if (response.status === 409) {
+            // Email already subscribed
+            statusMessage.textContent = "This email is already subscribed to our newsletter!"
+            statusMessage.className = "newsletter-status error"
+            statusMessage.classList.remove("hidden")
+            return
+          }
+
+          if (!response.ok) {
+            throw new Error("Subscription failed")
+          }
+
+          // Success
+          statusMessage.textContent =
+            "Thank you for subscribing to our newsletter!"
+          statusMessage.className = "newsletter-status success"
+          statusMessage.classList.remove("hidden")
+          ;(emailInput as HTMLInputElement).value = ""
+        } catch (error) {
+          // Error
+          statusMessage.textContent =
+            "Sorry, something went wrong. Please try again later."
+          statusMessage.className = "newsletter-status error"
+          statusMessage.classList.remove("hidden")
+          console.error("Subscription failed", error)
+        } finally {
+          // Reset button state
+          if (buttonSpan) buttonSpan.textContent = "Subscribe"
+          ;(submitBtn as HTMLButtonElement).disabled = false
+        }
+      })
+    }
+  })
+</script>
+
+<style lang="scss">
+  .section-newsletter {
+    background-color: var(--color-lightgray);
+
+    .container {
+      max-width: 800px;
+    }
+
+    .newsletter-content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .newsletter-form {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    // Override the newsletter-box styling for consistent colors
+    .newsletter-box {
+      .mc-field-group {
+        background: none;
+        border: none;
+
+        &::before {
+          background-color: var(--color-light);
+          border: 1px solid var(--color-border);
+        }
+
+        input[type="email"] {
+          background-color: var(--color-light);
+          color: var(--color-text);
+          border: 1px solid var(--color-border);
+          border-radius: var(--border-radius);
+
+          &::placeholder {
+            color: var(--color-text-text);
+          }
+
+          &:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 2px rgba(var(--color-primary-rgb), 0.1);
+          }
+        }
+      }
+    }
+
+    .newsletter-description {
+      color: var(--color-text);
+      max-width: 600px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter-form {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .newsletter-status {
+      margin-top: 1rem;
+      padding: 0.75rem;
+      border-radius: var(--border-radius);
+      font-size: 0.9rem;
+      text-align: center;
+
+      &.success {
+        background-color: rgba(34, 197, 94, 0.1);
+        color: #22c55e;
+        border: 1px solid rgba(34, 197, 94, 0.3);
+      }
+
+      &.error {
+        background-color: rgba(239, 68, 68, 0.1);
+        color: #ef4444;
+        border: 1px solid rgba(239, 68, 68, 0.3);
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .section-newsletter {
+      .newsletter-description {
+        font-size: 1rem;
+      }
+    }
+  }
+</style>

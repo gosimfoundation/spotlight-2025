@@ -10,7 +10,7 @@ import GetTickets from "components/GetTickets.astro"
 import ProgramOverview from "components/ProgramOverview.astro"
 import Timeline from "components/Timeline.astro"
 import PreviousEvents from "components/PreviousEvents.astro"
-
+import Newsletter from "components/Newsletter.astro"
 // Images
 import GosimDelft from "images/homepage/gosim-delft.png"
 import GosimParis2 from "images/homepage/sl-paris2.png"
@@ -29,7 +29,7 @@ import GosimParis2 from "images/homepage/sl-paris2.png"
     links={[
       {
         text: "Nominate Project",
-        link: "https://cfp.gosim.org/",
+        link: "https://aigc2025.gosim.org/",
         openInNewTab: true,
       },
       {
@@ -81,7 +81,7 @@ import GosimParis2 from "images/homepage/sl-paris2.png"
           </ul>
           <Button
             text="Submit Applied AI Project"
-            link="https://forms.office.com/r/gfBD25fxJb"
+            link="https://aigc2025.gosim.org/spotlight-aigc-applied"
             openInNewTab={true}
             class="btn light sm btn-hover fade-in-last"
           />
@@ -98,7 +98,7 @@ import GosimParis2 from "images/homepage/sl-paris2.png"
           </ul>
           <Button
             text="Submit Interactive Demo Project"
-            link="https://forms.office.com/r/cNm1SReSfX"
+            link="https://aigc2025.gosim.org/spotlight-aigc-artistic"
             openInNewTab={true}
             class="btn light sm btn-hover fade-in-last"
           />
@@ -126,7 +126,7 @@ import GosimParis2 from "images/homepage/sl-paris2.png"
     ]}
     ctaButton={{
       text: "Apply or Nominate Now",
-      link: "https://cfp.gosim.org/",
+      link: "https://aigc2025.gosim.org/",
     }}
   />
   <!--
@@ -235,8 +235,9 @@ import GosimParis2 from "images/homepage/sl-paris2.png"
     text="Know any project that deserves recognition? Don't wait - nominate it today and help us shine a spotlight on its potential. Or apply with your own project. Here are the important dates: Nominations opens on June 18, 2025, and close on August 18, 2025."
     ctaButton={{
       text: "Nominate Project",
-      link: "https://cfp.gosim.org/",
+      link: "https://aigc2025.gosim.org/",
       openInNewTab: true,
     }}
   />
+  <Newsletter />
 </Layout>
