@@ -25,6 +25,13 @@ const numProjs = projectsData.projects.length
     tagline={"Here are the " +
       numProjs +
       " projects selected for the GOSIM AI Spotlight 2025"}
+    links={[
+      {
+        text: "Learn More →",
+        link: "https://spotlight2025.gosim.org/ai2025",
+        openInNewTab: true,
+      },
+    ]}
   />
   <Intro>
     <h1 class="h3 light split-words animate-read">
@@ -44,6 +51,11 @@ const numProjs = projectsData.projects.length
     imageAlt="Gosim Spotlight badge"
     dataBgSection="beige"
     dataThemeSection="light"
+    ctaButton={{
+      text: "Learn More",
+      link: "https://spotlight2025.gosim.org/ai2025",
+      openInNewTab: true,
+    }}
   />
   <Projects projects={projectsData.projects} />
 </Layout>

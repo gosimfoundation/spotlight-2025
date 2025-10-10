@@ -121,16 +121,36 @@ const slug = Astro.url.pathname;
           <h2 class="h4">Stay up to date on all things GOSIM 2025</h2>
         </div>
         <div class="col-row col-row-input">
-          <Button
-            link="#"
-            text="Join our newsletter"
-            class="btn primary xl btn-hover"
-          />
+          <form id="footer-newsletter-form" class="footer-newsletter-form">
+            <div class="newsletter-box">
+              <div class="mc-field-group">
+                <label for="footer-email-address" class="sr-only">Email address</label>
+                <input
+                  id="footer-email-address"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  placeholder="Enter your email"
+                />
+                <div class="btn primary">
+                  <button type="submit" id="footer-submit-btn" class="btn-click">
+                    <div class="btn-content">
+                      <div class="btn-fill"></div>
+                      <span>Subscribe</span>
+                    </div>
+                    <div class="border-box"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
         <div class="col-row col-row-text styled-content">
           <p style="color: #fff;">
             Subscribe to the GOSIM Foundation mailing list to stay in the know.
           </p>
+          <div id="footer-status-message" class="footer-newsletter-status hidden"></div>
         </div>
       </div>
     </div>
@@ -285,3 +305,144 @@ const slug = Astro.url.pathname;
     </div>
   </div>
 </footer>
+
+<script>
+  const FOOTER_API_URL = 'https://cfp.gosim.org/api/subscribe';
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const footerForm = document.getElementById("footer-newsletter-form")
+    const footerEmailInput = document.getElementById("footer-email-address")
+    const footerSubmitBtn = document.getElementById("footer-submit-btn")
+    const footerStatusMessage = document.getElementById("footer-status-message")
+
+    if (footerForm && footerEmailInput && footerSubmitBtn && footerStatusMessage) {
+      footerForm.addEventListener("submit", async function (e) {
+        e.preventDefault()
+
+        const email = (footerEmailInput as HTMLInputElement).value
+        if (!email) return
+
+        // Update button state
+        const buttonSpan = footerSubmitBtn.querySelector("span")
+        if (buttonSpan) buttonSpan.textContent = "Submitting..."
+        ;(footerSubmitBtn as HTMLButtonElement).disabled = true
+        footerStatusMessage.classList.add("hidden")
+
+        try {
+          const response = await fetch(FOOTER_API_URL, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email: email,
+              page: "spotlight-footer",
+            }),
+          })
+
+          if (response.status === 409) {
+            // Email already subscribed
+            footerStatusMessage.textContent = "This email is already subscribed!"
+            footerStatusMessage.className = "footer-newsletter-status error"
+            footerStatusMessage.classList.remove("hidden")
+            return
+          }
+
+          if (!response.ok) {
+            throw new Error("Subscription failed")
+          }
+
+          // Success
+          footerStatusMessage.textContent = "Thank you for subscribing!"
+          footerStatusMessage.className = "footer-newsletter-status success"
+          footerStatusMessage.classList.remove("hidden")
+          ;(footerEmailInput as HTMLInputElement).value = ""
+        } catch (error) {
+          // Error
+          footerStatusMessage.textContent = "Something went wrong. Please try again."
+          footerStatusMessage.className = "footer-newsletter-status error"
+          footerStatusMessage.classList.remove("hidden")
+          console.error("Footer subscription failed", error)
+        } finally {
+          // Reset button state
+          if (buttonSpan) buttonSpan.textContent = "Subscribe"
+          ;(footerSubmitBtn as HTMLButtonElement).disabled = false
+        }
+      })
+    }
+  })
+</script>
+
+<style lang="scss">
+  .footer {
+    .footer-newsletter-form {
+      width: 100%;
+    }
+
+    // Newsletter styling adapted for dark footer theme - exact copy from Newsletter component
+    .newsletter-box {
+      .mc-field-group {
+        background: none;
+        border: none;
+
+        &::before {
+          background-color: var(--color-dark);
+          border: 1px solid var(--color-border-light);
+        }
+
+        input[type="email"] {
+          background-color: var(--color-dark);
+          color: var(--color-white);
+          border: 1px solid var(--color-border-light);
+          border-radius: var(--border-radius);
+
+          &::placeholder {
+            color: var(--color-text-light);
+          }
+
+          &:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 2px rgba(var(--color-primary-rgb), 0.1);
+          }
+        }
+      }
+    }
+
+    .footer-newsletter-status {
+      margin-top: 0.75rem;
+      padding: 0.5rem;
+      border-radius: var(--border-radius);
+      font-size: 0.85rem;
+      text-align: left;
+
+      &.success {
+        background-color: rgba(34, 197, 94, 0.1);
+        color: #22c55e;
+        border: 1px solid rgba(34, 197, 94, 0.3);
+      }
+
+      &.error {
+        background-color: rgba(239, 68, 68, 0.1);
+        color: #ef4444;
+        border: 1px solid rgba(239, 68, 68, 0.3);
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  }
+</style>
