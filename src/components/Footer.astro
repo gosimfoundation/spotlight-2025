@@ -1,22 +1,22 @@
 ---
 // Components
-import Button from "components/Button.astro";
-import Logo from "./Logo.astro";
+import Button from "components/Button.astro"
+import Logo from "./Logo.astro"
 
 const firstColumnLinks = [
   {
     text: "The Program",
-    link: "/#venue",
+    link: "/#program",
   },
   {
     text: "How It Work",
-    link: "/#venue",
+    link: "/#how",
   },
   // {
   //   text: "FAQ",
   //   link: "/faq/",
   // },
-];
+]
 
 const secondColumnLinks = [
   // {
@@ -26,15 +26,15 @@ const secondColumnLinks = [
   // },
   {
     text: "Why Participate",
-    link: "/#venue",
+    link: "/#why",
   },
   {
-    text: "Rules & Eligibility",
-    link: "/#venue",
+    text: "Timeline",
+    link: "/#timeline",
   },
-];
+]
 
-const slug = Astro.url.pathname;
+const slug = Astro.url.pathname
 ---
 
 <footer class="section footer" data-theme-section="dark" data-bg-section="dark">
@@ -124,7 +124,9 @@ const slug = Astro.url.pathname;
           <form id="footer-newsletter-form" class="footer-newsletter-form">
             <div class="newsletter-box">
               <div class="mc-field-group">
-                <label for="footer-email-address" class="sr-only">Email address</label>
+                <label for="footer-email-address" class="sr-only"
+                  >Email address</label
+                >
                 <input
                   id="footer-email-address"
                   name="email"
@@ -134,7 +136,11 @@ const slug = Astro.url.pathname;
                   placeholder="Enter your email"
                 />
                 <div class="btn primary">
-                  <button type="submit" id="footer-submit-btn" class="btn-click">
+                  <button
+                    type="submit"
+                    id="footer-submit-btn"
+                    class="btn-click"
+                  >
                     <div class="btn-content">
                       <div class="btn-fill"></div>
                       <span>Subscribe</span>
@@ -150,7 +156,11 @@ const slug = Astro.url.pathname;
           <p style="color: #fff;">
             Subscribe to the GOSIM Foundation mailing list to stay in the know.
           </p>
-          <div id="footer-status-message" class="footer-newsletter-status hidden"></div>
+          <div
+            id="footer-status-message"
+            class="footer-newsletter-status hidden"
+          >
+          </div>
         </div>
       </div>
     </div>
@@ -307,7 +317,7 @@ const slug = Astro.url.pathname;
 </footer>
 
 <script>
-  const FOOTER_API_URL = 'https://cfp.gosim.org/api/subscribe';
+  const FOOTER_API_URL = "https://cfp.gosim.org/api/subscribe"
 
   document.addEventListener("DOMContentLoaded", function () {
     const footerForm = document.getElementById("footer-newsletter-form")
@@ -315,7 +325,12 @@ const slug = Astro.url.pathname;
     const footerSubmitBtn = document.getElementById("footer-submit-btn")
     const footerStatusMessage = document.getElementById("footer-status-message")
 
-    if (footerForm && footerEmailInput && footerSubmitBtn && footerStatusMessage) {
+    if (
+      footerForm &&
+      footerEmailInput &&
+      footerSubmitBtn &&
+      footerStatusMessage
+    ) {
       footerForm.addEventListener("submit", async function (e) {
         e.preventDefault()
 
@@ -342,7 +357,8 @@ const slug = Astro.url.pathname;
 
           if (response.status === 409) {
             // Email already subscribed
-            footerStatusMessage.textContent = "This email is already subscribed!"
+            footerStatusMessage.textContent =
+              "This email is already subscribed!"
             footerStatusMessage.className = "footer-newsletter-status error"
             footerStatusMessage.classList.remove("hidden")
             return
@@ -359,7 +375,8 @@ const slug = Astro.url.pathname;
           ;(footerEmailInput as HTMLInputElement).value = ""
         } catch (error) {
           // Error
-          footerStatusMessage.textContent = "Something went wrong. Please try again."
+          footerStatusMessage.textContent =
+            "Something went wrong. Please try again."
           footerStatusMessage.className = "footer-newsletter-status error"
           footerStatusMessage.classList.remove("hidden")
           console.error("Footer subscription failed", error)

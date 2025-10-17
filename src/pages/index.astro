@@ -29,7 +29,7 @@ import GosimParis2 from "images/homepage/sl-paris2.png"
     links={[
       {
         text: "Nominate Project",
-        link: "https://aigc2025.gosim.org/",
+        link: "https://cfp.gosim.org/",
         openInNewTab: true,
       },
       {
@@ -41,7 +41,7 @@ import GosimParis2 from "images/homepage/sl-paris2.png"
   />
   <div
     class="section-wrap"
-    id="intro"
+    id="program"
     data-theme-section="light"
     data-bg-section="lightgray"
   >
@@ -107,28 +107,36 @@ import GosimParis2 from "images/homepage/sl-paris2.png"
     </Intro>
   </div>
   <ProgramOverview />
-  <Tracks
-    title="Participating in GOSIM Spotlight is a simple 3 step process"
-    description="The Spotlight aims to highlight a curated selection of impactful and forward-thinking projects that exemplify human–AI co-creation. Submissions will be evaluated by an independent jury composed of leading experts from academia, industry, and the creative sector."
-    list={[
-      {
-        title: "Apply or Nominate",
-        text: `Tell us about your innovative work and why it deserves to be seen by the world. Anyone can also nominate others' projects.`,
-      },
-      {
-        title: "Evaluation",
-        text: `Our panel of experts reviews the submissions, focusing on innovation, utility, and community impact.`,
-      },
-      {
-        title: "Selection",
-        text: `Selected projects/papers/models will be showcased at the GOSIM Hangzhou Conference. They will also be featured on our website, newsletter, and social media channels, ensuring they reach a global audience.`,
-      },
-    ]}
-    ctaButton={{
-      text: "Apply or Nominate Now",
-      link: "https://aigc2025.gosim.org/",
-    }}
-  />
+  <div
+    class="section-wrap"
+    id="how"
+    data-theme-section="light"
+    data-bg-section="lightgray"
+  >
+    <Tracks
+      title="Participating in GOSIM Spotlight is a simple 3 step process"
+      description="The Spotlight aims to highlight a curated selection of impactful and forward-thinking projects that exemplify human–AI co-creation. Submissions will be evaluated by an independent jury composed of leading experts from academia, industry, and the creative sector."
+      list={[
+        {
+          title: "Apply or Nominate",
+          text: `Tell us about your innovative work and why it deserves to be seen by the world. Anyone can also nominate others' projects.`,
+        },
+        {
+          title: "Evaluation",
+          text: `Our panel of experts reviews the submissions, focusing on innovation, utility, and community impact.`,
+        },
+        {
+          title: "Selection",
+          text: `Selected projects/papers/models will be showcased at the GOSIM Hangzhou Conference. They will also be featured on our website, newsletter, and social media channels, ensuring they reach a global audience.`,
+        },
+      ]}
+      ctaButton={{
+        text: "Apply or Nominate Now",
+        link: "https://aigc2025.gosim.org/",
+      }}
+    />
+  </div>
+
   <!--
   <Notify
     title="Try the GOSIM ticket lucky draw!"
@@ -147,97 +155,106 @@ import GosimParis2 from "images/homepage/sl-paris2.png"
     ]}
   />
    -->
-  <Cards
-    title="Why Apply?"
-    description="Gain international visibility, connect with leading voices across AI, art, and society, and showcase your work at the AI for Humanity Spotlight at GOSIM Hangzhou 2025. Selected submissions will be featured in a curated program that brings together developers, researchers, artists, and practitioners working at the frontier of generative AI. Participants will receive expert feedback, strategic exposure, and access to a global network of collaborators. Travel support and follow-up opportunities for incubation or publication may be available for outstanding projects."
-    cards={[
-      {
-        title: "Exclusive Showcase",
-        description:
-          "Present your project or artwork to a curated global audience across tech, art, and society.",
-        image: "/icons/showcase.svg",
-      },
-      {
-        title: "Travel Support",
-        description:
-          "Receive travel and accommodation funding for selected representatives to present their work on-site in Hangzhou.",
-        image: "/icons/travel-support.svg",
-      },
-      {
-        title: "Mentorship & Resources",
-        description:
-          "Get expert feedback from leading AI researchers, designers, artists, and spotlight jury members.",
-        image: "/icons/mentorship.svg",
-      },
-      {
-        title: "Global Visibility",
-        description:
-          "Gain recognition at GOSIM Hangzhou 2025 and connect with international collaborators and platforms.",
-        image: "/icons/global-visibility.svg",
-      },
-      {
-        title: "Incubation Opportunities",
-        description:
-          "Selected projects may be connected with post-event opportunities such as early-stage funding, institutional partnerships, or showcase invitations.",
-        image: "/icons/networking-recognition.svg",
-      },
-      {
-        title: "Community Growth",
-        description:
-          "Build long-term partnerships, and grow within a values-driven open-source ecosystem.",
-        image: "/icons/community-growth.svg",
-      },
-    ]}
-  />
-  <Timeline
-    events={[
-      {
-        date: "June 18, 2025",
-        title: "Applications open",
-      },
-      {
-        date: "August 18, 2025",
-        title: "Nominations close",
-      },
-      {
-        date: "August 25, 2025",
-        title: "Candidates announced",
-      },
-      {
-        date: "September 13-14, 2025",
-        title: "Spotlight showcase",
-      },
-    ]}
-  />
-  <PreviousEvents
-    title="Previous Spotlight Events"
-    events={[
-      {
-        title: "AI Spotlight: Paris",
-        date: "May 6-7, 2025",
-        description:
-          "Propelling Open-Source AI Forward: Innovative open AI models and robotics projects.",
-        image: GosimParis2,
-        link: "/ai2025",
-      },
-      {
-        title: "Rust Spotlight: Delft",
-        date: "May 13-14, 2025",
-        description:
-          "Celebrating the brilliance and creativity of open-source projects developed with Rust.",
-        image: GosimDelft,
-        link: "/rust2025",
-      },
-    ]}
-  />
-  <GetTickets
-    title="Now accepting applications!"
-    text="Know any project that deserves recognition? Don't wait - nominate it today and help us shine a spotlight on its potential. Or apply with your own project. Here are the important dates: Nominations opens on June 18, 2025, and close on August 18, 2025."
-    ctaButton={{
-      text: "Nominate Project",
-      link: "https://aigc2025.gosim.org/",
-      openInNewTab: true,
-    }}
-  />
-  <!-- <Newsletter /> -->
+
+  <div class="section-wrap" id="why">
+    <Cards
+      title="Why Apply?"
+      description="Gain international visibility, connect with leading voices across AI, art, and society, and showcase your work at the AI for Humanity Spotlight at GOSIM Hangzhou 2025. Selected submissions will be featured in a curated program that brings together developers, researchers, artists, and practitioners working at the frontier of generative AI. Participants will receive expert feedback, strategic exposure, and access to a global network of collaborators. Travel support and follow-up opportunities for incubation or publication may be available for outstanding projects."
+      cards={[
+        {
+          title: "Exclusive Showcase",
+          description:
+            "Present your project or artwork to a curated global audience across tech, art, and society.",
+          image: "/icons/showcase.svg",
+        },
+        {
+          title: "Travel Support",
+          description:
+            "Receive travel and accommodation funding for selected representatives to present their work on-site in Hangzhou.",
+          image: "/icons/travel-support.svg",
+        },
+        {
+          title: "Mentorship & Resources",
+          description:
+            "Get expert feedback from leading AI researchers, designers, artists, and spotlight jury members.",
+          image: "/icons/mentorship.svg",
+        },
+        {
+          title: "Global Visibility",
+          description:
+            "Gain recognition at GOSIM Hangzhou 2025 and connect with international collaborators and platforms.",
+          image: "/icons/global-visibility.svg",
+        },
+        {
+          title: "Incubation Opportunities",
+          description:
+            "Selected projects may be connected with post-event opportunities such as early-stage funding, institutional partnerships, or showcase invitations.",
+          image: "/icons/networking-recognition.svg",
+        },
+        {
+          title: "Community Growth",
+          description:
+            "Build long-term partnerships, and grow within a values-driven open-source ecosystem.",
+          image: "/icons/community-growth.svg",
+        },
+      ]}
+    />
+  </div>
+
+  <div class="section-wrap" id="timeline">
+    <Timeline
+      events={[
+        {
+          date: "June 18, 2025",
+          title: "Applications open",
+        },
+        {
+          date: "August 18, 2025",
+          title: "Nominations close",
+        },
+        {
+          date: "August 25, 2025",
+          title: "Candidates announced",
+        },
+        {
+          date: "September 13-14, 2025",
+          title: "Spotlight showcase",
+        },
+      ]}
+    />
+  </div>
+  <div class="section-wrap" id="previous">
+    <PreviousEvents
+      title="Previous Spotlight Events"
+      events={[
+        {
+          title: "AI Spotlight: Paris",
+          date: "May 6-7, 2025",
+          description:
+            "Propelling Open-Source AI Forward: Innovative open AI models and robotics projects.",
+          image: GosimParis2,
+          link: "/ai2025",
+        },
+        {
+          title: "Rust Spotlight: Delft",
+          date: "May 13-14, 2025",
+          description:
+            "Celebrating the brilliance and creativity of open-source projects developed with Rust.",
+          image: GosimDelft,
+          link: "/rust2025",
+        },
+      ]}
+    />
+    </div>
+    <GetTickets
+      title="Now accepting applications!"
+      text="Know any project that deserves recognition? Don't wait - nominate it today and help us shine a spotlight on its potential. Or apply with your own project. Here are the important dates: Nominations opens on June 18, 2025, and close on August 18, 2025."
+      ctaButton={{
+        text: "Nominate Project",
+        link: "https://cfp.gosim.org/",
+        openInNewTab: true,
+      }}
+    />
+    <!-- <Newsletter /> -->
+  </div>
 </Layout>
